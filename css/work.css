@@ -1,0 +1,156 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .branding h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #000;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a.active {
+    color: #555;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #555;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.artwork {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.artwork-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    align-items: center;
+    margin: 0;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding: 100px;
+    border: 0;
+}
+
+.artwork-item img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.artwork-details {
+    max-width: 50%;
+    text-align: justify;
+}
+
+.artwork-details h2 {
+    margin-top: 0;
+}
+
+.artwork-details p {
+    margin: 10px 0;
+}
+
+.artwork-details p:last-child {
+    text-align: left;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    position: absolute;
+    right: 0;
+    margin-right: auto;
+}
+
+.share p {
+    margin: 0;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.share ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.share ul li {
+    margin: 0 5px;
+}
+
+.share ul li a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s;
+}
+
+.share ul li a:hover {
+    color :#555;
+}
+
+.share ul li img {
+    width: 24px;
+    height: 24px;
+}
