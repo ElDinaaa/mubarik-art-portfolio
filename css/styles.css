@@ -63,3 +63,9 @@ body {
 .navigation a:hover {
     color: #ccc;
 }
+
+@media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2em; /* Отрегулируйте значение для экранов меньшего размера */
+    }
+  }
