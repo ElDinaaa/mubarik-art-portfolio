@@ -96,12 +96,8 @@ main {
 .artwork-item {
     display: flex;
     flex-direction: row;
-    /* margin-bottom: 0px; */
     align-items: flex-start;
     margin: 0 auto;
-    /* margin-right: 200px;
-    margin-left: 200px;
-    padding: 100px; */
     padding: 20px;
     border: 0;
     max-width: 800px;
@@ -111,6 +107,7 @@ main {
     max-width: 50%;
     height: auto;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .artwork-details {
@@ -120,6 +117,7 @@ main {
 
 .artwork-details h2 {
     margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .artwork-details p {
@@ -127,7 +125,7 @@ main {
 }
 
 .artwork-details p:last-child {
-    text-align: left;
+    margin: 10px 0;
 }
 
 footer {
@@ -192,18 +190,22 @@ footer {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+        position: relative;
+        z-index: 1100;
     }
 
     #nav-links {
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
         background-color: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
     }
 
     #nav-links.active {
@@ -212,6 +214,8 @@ footer {
 
     #nav-links li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center;
     }
 
     .artwork-item {
