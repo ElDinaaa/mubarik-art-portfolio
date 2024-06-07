@@ -12,19 +12,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const header = document.querySelector('.overlay h1');
-    const navItems = document.querySelectorAll('.navigation a');
+    //animation for header and navigation on page load
 
-    header.style.opacity = 0;
+    const header = document.querySelector('.overlay h1');
+    const navItems = document.querySelectorAll('.navigation a, nav ul#nav-links li a');
+
+    if(header) {
+        header.style.opacity = 0;
+    }
     navItems.forEach(link => link.style.opacity = 0);
 
     setTimeout(() => {
-        header.style.transition = 'opacity 1s';
-        header.style.opacity = 1;
+        if(header){
+            header.style.transition = 'opacity 1s';
+            header.style.opacity = 1;
+        }    
         navItems.forEach((link, index) => {
             link.style.transition = 'opasity 1s ${index * 0.2}s';
             link.style.opacity = 1;
         });
     }, 100);
 
+    document.querySelectorAll('.navigation a, nav ul#nav-links li a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if(href.startsWith('#')){
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+               if(targetElement) {
+                  window.scrollTo({
+                      top: targetElement.offsetTop,
+                      behavior: 'smooth'       
+                    });
+                }
+            }        
+        });
+    });
 });
