@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, 100);
 
+    //smooth scroll for navigation links
+
     document.querySelectorAll('.navigation a, nav ul#nav-links li a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -50,4 +52,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }        
         });
     });
+
+
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll('.artwork-item img').forEach(img => {
+        img.addEventListener('click', () => {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.nextElementSibling.querySelector('h2').innerHTML;
+        });
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener('click', (event) => {
+        if(event.target == modal) {
+            modal.style.display = "none";
+        }
+    });
+
 });

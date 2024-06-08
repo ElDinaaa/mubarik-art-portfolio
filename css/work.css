@@ -108,6 +108,12 @@ main {
     height: auto;
     margin-right: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.artwork-item img:hover {
+    transform: scale(1.05);
 }
 
 .artwork-details {
@@ -126,6 +132,74 @@ main {
 
 .artwork-details p:last-child {
     margin: 10px 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-content-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.modal-content {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #000000;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #8a8a8a;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 footer {
