@@ -25,16 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleMenu();
     });
 
-    // hamburger.addEventListener('click', () => {
-    //     navLinks.classList.toggle('active');
-
-    //     if (navLinks.classList.contains('active')) {
-    //         document.body.style.overflow = 'hidden' ;
-    //     } else {
-    //         document.body.style.overflow = 'auto' ;
-    //     }
-    // });
-
     //animation for header and navigation on page load
 
     const header = document.querySelector('.overlay h1');

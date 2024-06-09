@@ -319,6 +319,14 @@ footer {
     height: 24px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .filters {
+        justify-content: flex-start;
+        padding-left: 60px; /* Регулируйте значение для достижения нужного выравнивания */
+
+    }
+}
+
 @media (max-width: 768px) {
 
     body.no-scroll {
@@ -364,6 +372,14 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+    .filters label {
+        margin-right: 10px;
+    }
+
+    .filters select {
+        margin-top: 5px;
     }
 
     .filters label, 
