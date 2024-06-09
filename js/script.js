@@ -1,16 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
+    const closeMenu = document.getElementById('close-menu');
     const navLinks = document.getElementById('nav-links');
 
-    hamburger.addEventListener('click', () => {
+    const toggleMenu = () => {
         navLinks.classList.toggle('active');
+        hamburger.classList.toggle('is-active');
+        closeMenu.classList.toggle('is-active');
 
-        if (navLinks.classList.contains('active')) {
-            document.body.style.overflow = 'hidden' ;
+        if(navLinks.classList.contains('active')) {
+            document.body.classList.add('no-scroll');
         } else {
-            document.body.style.overflow = 'auto' ;
+            document.body.classList.remove('no-scroll');
         }
+    };
+
+    hamburger.addEventListener('click', (event) => {
+        event.stopPropagation();
+        toggleMenu();
     });
+
+    closeMenu.addEventListener('click', (event) => {
+        event.stopPropagation();
+        toggleMenu();
+    });
+
+    // hamburger.addEventListener('click', () => {
+    //     navLinks.classList.toggle('active');
+
+    //     if (navLinks.classList.contains('active')) {
+    //         document.body.style.overflow = 'hidden' ;
+    //     } else {
+    //         document.body.style.overflow = 'auto' ;
+    //     }
+    // });
 
     //animation for header and navigation on page load
 
@@ -53,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // modal window for images
 
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImage");
@@ -64,16 +88,19 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = "block";
             modalImg.src = img.src;
             captionText.innerHTML = img.nextElementSibling.querySelector('h2').innerHTML;
+            document.body.classList.add('no-scroll');
         });
     });
 
     closeModal.addEventListener('click', () => {
         modal.style.display = "none";
+        document.body.classList.remove('no-scroll');
     });
 
     window.addEventListener('click', (event) => {
         if(event.target == modal) {
             modal.style.display = "none";
+            document.body.classList.remove('no-scroll');
         }
     });
 

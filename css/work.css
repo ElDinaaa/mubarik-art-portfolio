@@ -1,7 +1,18 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body.no-scroll {
+    overflow: hidden !important;
 }
 
 header {
@@ -13,6 +24,10 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
 }
 
 .hamburger .line {
@@ -20,6 +35,14 @@ header {
     height: 3px;
     background-color: #000;
     margin: 4px 0;
+}
+
+.close-menu {
+    display: none;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
 }
 
 #nav-links {
@@ -84,6 +107,40 @@ header nav ul li a:hover {
 
 main {
     padding-top: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters select {
+    padding: 5px;
+    font-size: 0.9em;
+    max-width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+#no-results-message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
 }
 
 .artwork {
@@ -137,7 +194,7 @@ main {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 1100;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -209,6 +266,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
 }
 
 .footer-container {
@@ -262,10 +320,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    body.no-scroll {
+        overflow: hidden !important;
+    }
+
     .hamburger {
         display: flex;
-        position: relative;
-        z-index: 1100;
+        /* position: relative;
+        z-index: 1050; */
     }
 
     #nav-links {
@@ -274,15 +337,20 @@ footer {
         align-items: center;
         justify-content: center;
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         background-color: #fff;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1000;
+        overflow-y: auto; 
     }
 
     #nav-links.active {
+        display: flex;
+    }
+
+    .close-menu {
         display: flex;
     }
 
@@ -290,6 +358,22 @@ footer {
         margin: 10px 0;
         width: 100%;
         text-align: center;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .filters label, 
+    .filters select {
+        width: auto;
+    }
+
+    .filters select {
+        font-size: 0.8em;
+        max-width: 90%;
     }
 
     .artwork-item {
