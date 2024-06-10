@@ -73,11 +73,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const captionText = document.getElementById("caption");
     const closeModal = document.getElementById("closeModal");
 
-    document.querySelectorAll('.artwork-item img').forEach(img => {
+    document.querySelectorAll('img').forEach(img => {
         img.addEventListener('click', () => {
             modal.style.display = "block";
             modalImg.src = img.src;
-            captionText.innerHTML = img.nextElementSibling.querySelector('h2').innerHTML;
+            const nextSiblingH2 = img.nextElementSibling?.querySelector('h2');
+            if(nextSiblingH2) {
+                captionText.innerHTML = nextSiblingH2.innerHTML;
+            } else {
+                captionText.innerHTML = img.alt;
+            }
             document.body.classList.add('no-scroll');
         });
     });
@@ -98,17 +103,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const shareText = document.getElementById('share-text');
     const shareMenu = document.querySelector('.share-menu');
 
+    if (shareText && shareMenu) {
+        console.log("Share elements found in DOM.");
+
     shareText.addEventListener('click', (event) => {
         event.stopPropagation();
         shareMenu.classList.toggle('active');
+        console.log("Share button clicked, menu toggled.");
     });
 
     document.addEventListener('click', (event) => {
         if (!shareMenu.contains(event.target) && event.target !== shareText) {
             shareMenu.classList.remove('active');
+            console.log("Clicked outside the share menu, menu hidden.");
         }
     });
-    
+    } else {
+    console.log("Share elements not found in DOM.");
+    }
+
     function shareToFacebook() {
         window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL), 'Share to Facebook', 'width=600,height=400');
     }

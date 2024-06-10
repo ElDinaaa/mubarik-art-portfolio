@@ -431,8 +431,6 @@ footer {
 
     .hamburger {
         display: flex;
-        /* position: relative;
-        z-index: 1050; */
     }
 
     #nav-links {
