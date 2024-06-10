@@ -275,9 +275,10 @@ footer {
     padding: 0 20px;
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 
-.share {
+.share-container {
     display: flex;
     align-items: center;
     font-size: 0.8em;
@@ -287,43 +288,138 @@ footer {
     padding-bottom: 10px;
 }
 
-.share p {
-    margin: 0;
+.share-button {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
     margin-right: 10px;
+    cursor: pointer;
     font-weight: bold;
 }
 
-.share ul {
+.share-menu {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-84%);
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 200px;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.share-arrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #f0f0f0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.share-arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f0f0f0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.share-menu.active {
+    display: block;
+}
+
+.share-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.share-menu ul li {
+    margin: 0;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.share-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: 0.9em;
+    width: 100%;
+    padding: 8px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.share-menu ul li a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.share-menu ul li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.share-menu ul li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+
+.social-links {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    margin-right: 20px;
+}
+
+.social-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.share ul li {
+.social-links ul li {
     margin: 0 5px;
 }
 
-.share ul li a {
+.social-links ul li a {
     text-decoration: none;
     color: #000;
     transition: color 0.3s;
 }
 
-.share ul li a:hover {
+.social-links ul li a:hover {
     color :#555;
 }
 
-.share ul li img {
+.social-links ul li img {
     width: 24px;
     height: 24px;
-}
+}    
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .filters {
         justify-content: flex-start;
-        padding-left: 60px; /* Регулируйте значение для достижения нужного выравнивания */
-
+        padding-left: 60px;
     }
 }
 
@@ -372,6 +468,8 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
     }
 
     .filters label {

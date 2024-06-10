@@ -94,4 +94,40 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    //adding share button 
+    const shareText = document.getElementById('share-text');
+    const shareMenu = document.querySelector('.share-menu');
+
+    shareText.addEventListener('click', (event) => {
+        event.stopPropagation();
+        shareMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!shareMenu.contains(event.target) && event.target !== shareText) {
+            shareMenu.classList.remove('active');
+        }
+    });
+    
+    function shareToFacebook() {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL), 'Share to Facebook', 'width=600,height=400');
+    }
+
+    function shareToInstagram() {
+        window.open('https://www.instagram.com', 'Share to Instagram', 'width=600,height=400');
+    }
+
+    function shareToTwitter() {
+        window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(document.URL) + '&text=' + encodeURIComponent(document.title), 'Share to Twitter', 'width=600,height=400');
+    }
+
+    function shareToPinterest() {
+        window.open('https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL), 'Share to Pinterest', 'width=600,height=400');
+    }
+
+    window.shareToFacebook = shareToFacebook;
+    window.shareToInstagram = shareToInstagram;
+    window.shareToTwitter = shareToTwitter;
+    window.shareToPinterest = shareToPinterest;
+
 });
