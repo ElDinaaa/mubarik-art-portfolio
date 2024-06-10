@@ -54,8 +54,8 @@
                 <img src="images/contact-pic.jpg" alt="Artwork">
             </div>
         </section>
-        <section class="contact-form">
-            <form action="#" method="post">
+        <section class="contact-form" autocomplete="off">
+            <form id="contactForm" action="#" method="post">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -63,9 +63,12 @@
                 <input type="text" id="email" name="email" required>
 
                 <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
+                <textarea name="message" id="message" rows="5"  required></textarea>
 
                 <button type="submit">Send</button>
+                <div class="form-message-container">
+                    <div id="formMessage"></div>
+                </div>
             </form>
         </section>
     </main>
@@ -101,5 +104,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
