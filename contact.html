@@ -41,6 +41,7 @@
                     <li><a href="work.html">Work</a></li>
                     <li><a href="about.html">About me</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
+                    <div class="hamburger close-menu" id="close-menu"></div>
                 </ul>
             </nav>
         </div>
@@ -48,7 +49,7 @@
 
     <main>
         <section class="contact-info">
-            <h2>Contact me if you have questions or you're willing to purchase my art</h2>
+            <h2>Contact me if you have questions or you're willing to purchase my art.</h2>
             <div class="contact-image">
                 <img src="images/contact-pic.jpg" alt="Artwork">
             </div>
@@ -68,15 +69,33 @@
             </form>
         </section>
     </main>
+
+    <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
     <footer>
         <div class="footer-container">
-            <div class="share">
-                <p>share</p>
-                <ul>
-                    <li><a href="https://www.facebook.com" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a></li> <!-- Добавить ссылку на фейсбук -->
-                    <li><a href="https://www.instagram.com" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a></li> <!-- Добавить ссылку на инсту-->
-                    <li><a href="https://www.whatsapp.com" target="_blank"><img src="images/icon-whatsapp.png" alt="WhatsApp"></a></li> <!-- Добавить ссылку на ватс -->
-                </ul>
+            <div class="share-container">
+                <p id="share-text" class="share-button">Share</p>
+                <div class="share-menu">
+                    <div class="share-arrow"></div> 
+                    <ul>
+                        <li><a href="#" onclick="shareToFacebook()"><img src="images/icon-facebook.png" alt="Facebook">Share to Facebook</a></li>
+                        <li><a href="#" onclick="shareToInstagram()"><img src="images/icon-instagram.png" alt="Instagram">Share to Instagram</a></li>
+                        <li><a href="#" onclick="shareToTwitter()"><img src="images/icon-twitterx.png" alt="Twitter">Share to Twitter</a></li>
+                        <li><a href="#" onclick="shareToPinterest()"><img src="images/icon-pinterest.png" alt="Pinterest">Share to Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank"><img src="images/icon-facebook.png" alt="Facebook"></a></li> <!-- Добавить ссылку на фейсбук -->
+                        <li><a href="https://www.instagram.com" target="_blank"><img src="images/icon-instagram.png" alt="Instagram"></a></li> <!-- Добавить ссылку на инсту-->
+                        <li><a href="https://www.whatsapp.com" target="_blank"><img src="images/icon-whatsapp.png" alt="WhatsApp"></a></li> <!-- Добавить ссылку на ватс -->
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>

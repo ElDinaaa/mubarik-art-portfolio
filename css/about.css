@@ -438,8 +438,9 @@ footer {
         margin-bottom: 20px;
         text-align: left;
         width: 100%;
+        box-sizing: border-box;
     }
-
+   
     .biography .photo {
         width: 100%;
         margin-left: 0;
@@ -448,5 +449,9 @@ footer {
     .biography .photo img {
         max-width: 100%;
         height: auto;
+    }
+
+    .modal-content {
+        margin-top: 75px; 
     }
 }    
