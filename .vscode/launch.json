@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MubiwebsiteApplication<mubiwebsite>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.dinael.mubiwebsite.MubiwebsiteApplication",
+            "projectName": "mubiwebsite",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

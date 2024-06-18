@@ -75,14 +75,29 @@ document.addEventListener('DOMContentLoaded', () => {
             messageError.textContent = '';
         }
 
-        formMessage.innerHTML = 'Sending...';
-        formMessage.style.color = 'blue';
+        if(isValid) {
+            formMessage.innerHTML = 'Sending...';
+            formMessage.style.color = 'blue';
 
-        setTimeout(() => {
-            formMessage.innerHTML = 'Message sent successfully!';
-            formMessage.style.color = 'green';
-            form.reset();
-        }, 1000);
+            fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }, 
+                body: JSON.stringify({name, email, message})
+            })
+            .then(response => response.text())
+            .then(data => {
+                formMessage.innerHTML = 'Message sent successfully!';
+                formMessage.style.color = 'green';
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formMessage.innerHTML = 'There was an error submitting your message.';
+                formMessage.style.color = 'red';
+            });
+        }
     });
 
     function validateName(name) {
