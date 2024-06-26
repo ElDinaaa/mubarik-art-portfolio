@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = emailInput.value.trim();
         const message = messageInput.value.trim();
 
+        const formData = { name, email, message };
+
         let isValid = true;
 
         if (!validateName(name)) {
@@ -84,17 +86,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json'
                 }, 
-                body: JSON.stringify({name, email, message})
+                body: JSON.stringify(formData)
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                formMessage.innerHTML = 'Message sent successfully!';
-                formMessage.style.color = 'green';
-                form.reset();
+                if (data.success) {
+                    formMessage.textContent = 'Message sent successfully!';
+                    formMessage.style.color = 'green';
+                    form.reset();
+                } else {
+                    formMessage.textContent = 'There was an error submitting your message.';
+                    formMessage.style.color = 'red';
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
-                formMessage.innerHTML = 'There was an error submitting your message.';
+                formMessage.textContent = 'There was an error submitting your message.';
                 formMessage.style.color = 'red';
             });
         }
