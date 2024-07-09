@@ -1,13 +1,16 @@
+// Ждем полной загрузки DOM, прежде чем выполнять функции
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const closeMenu = document.getElementById('close-menu');
     const navLinks = document.getElementById('nav-links');
 
+    // Функция для переключения видимости меню
     const toggleMenu = () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('is-active');
         closeMenu.classList.toggle('is-active');
 
+         // Добавляет/удаляет класс 'no-scroll' на body в зависимости от состояния меню
         if(navLinks.classList.contains('active')) {
             document.body.classList.add('no-scroll');
         } else {
