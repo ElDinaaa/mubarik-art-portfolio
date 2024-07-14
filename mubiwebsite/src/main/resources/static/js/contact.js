@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
 
+    // Создаем элементы для отображения ошибок и добавляем их после соответствующих полей ввода
     const nameError = document.createElement('div');
     nameError.id = 'error';
     nameInput.parentNode.insertBefore(nameError, nameInput.nextSibling);
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     messageError.id = 'error';
     messageInput.parentNode.insertBefore(messageError, messageInput.nextSibling);
 
+    // Добавляем обработчики события 'blur', которык проверяют значение поля ввода при потере фокуса и обновляют сообщение об ошибке в зависимости от результата валидации.
     nameInput.addEventListener('blur', () => {
         const nameValue = nameInput.value.trim();
         if(!validateName(nameValue)) {
@@ -45,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Добавляем обработчик события 'submit' для формы
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -55,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = { name, email, message };
 
         let isValid = true;
-
+        // Проверка валидности имени
         if (!validateName(name)) {
             nameError.textContent = 'Please enter a valid name.';
             isValid = false;
@@ -63,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nameError.textContent = '';
         }
 
+        // Проверка валидности email
         if (!validateEmail(email)) {
             emailError.textContent = 'Please enter a valid email address.';
             isValid = false;
@@ -70,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             emailError.textContent = '';
         }
 
+        // Проверка наличия сообщения
         if (message === '') {
             messageError.textContent = 'Please enter a message.';
             isValid = false;
@@ -77,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
             messageError.textContent = '';
         }
 
+        // Если все поля валидны, отправляем данные формы на сервер
         if(isValid) {
             formMessage.innerHTML = 'Sending...';
             formMessage.style.color = 'blue';
@@ -107,11 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Функция для валидации имени
     function validateName(name) {
         const re = /^[A-Za-z\s]+$/;
         return re.test(String(name));
     }
 
+    // Функция для валидации email
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());

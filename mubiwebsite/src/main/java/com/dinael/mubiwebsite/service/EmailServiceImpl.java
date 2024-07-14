@@ -14,12 +14,15 @@ public class EmailServiceImpl implements EmailService {
 
     private static final Logger log = LoggerFactory.getLogger(EmailServiceImpl.class);
 
+    // Автоматическое внедрение экземпляра JavaMailSender
     @Autowired
     private JavaMailSender javaMailSender;
 
+    // Автоматическое внедрение экземпляра Environment для доступа к настройкам приложения
     @Autowired
     private Environment env;
 
+    // Реализация метода sendSimpleMessage для отправки простого текстового сообщения по электронной почте
     @Override
     public void sendSimpleMessage(String to, String subject, String text) throws MailException {
         log.info(this.getClass().getName() + ".SendMail start!");

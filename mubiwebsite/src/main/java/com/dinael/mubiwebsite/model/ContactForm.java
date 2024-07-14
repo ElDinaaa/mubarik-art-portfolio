@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+// Аннотация @Entity указывает, что этот класс является сущностью JPA, то есть он будет отображен в таблицу базы данных.
 @Entity
 public class ContactForm {
 
