@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Работы - Мубарик Эльмурзаева</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/css/work.css">
+    <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico"> <!-- Ваш собственный фавикон -->
+    <link rel="canonical" href="http://mubarikelmurzaeva.com">
+
+    <meta property="og:site_name" content="Мубарик Эльмурзаева">
+    <meta property="og:title" content="Работы - Мубарик Эльмурзаева">
+    <meta property="og:url" content="http://mubarikelmurzaeva.com/ru/work">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Работы - Мубарик Эльмурзаева">
+    <meta itemprop="url" content="http://mubarikelmurzaeva.com/ru/work">
+    <meta name="twitter:title" content="Работы - Мубарик Эльмурзаева">
+    <meta name="twitter:url" content="http://mubarikelmurzaeva.com/ru/work">
+    <meta name="twitter:card" content="summary">
+    <meta name="description" content="Исследуйте произведения искусства Мубарик Эльмурзаевой. Просмотрите подробные описания, размеры и цены.">
+
+    <script src="/js/language-switcher.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <div class="branding">
+                <h1><a href="/ru/index">Мубарик Эльмурзаева</a></h1>
+            </div>
+
+            <nav>
+                <div class="hamburger" id="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <ul id="nav-links">
+                    <li><a href="/ru/index">Главная</a></li>
+                    <li><a href="/ru/work" class="active">Работы</a></li>
+                    <li><a href="/ru/about">Обо мне</a></li>
+                    <li><a href="/ru/contact">Контакты</a></li>
+                    <li class="language-switcher">
+                        <a href="/en/index" id="lang-en">English</a> | <a href="/ru/index" id="lang-ru">Русский</a>
+                    </li>
+                    <div class="hamburger close-menu" id="close-menu">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="filters">
+            <label for="categoryFilter">Фильтр по категориям:</label>
+            <select id="categoryFilter">
+                <option value="all">Все</option>
+                <option value="availableArt">Доступные работы</option>
+                <option value="oil">Картины маслом</option>
+                <option value="watercolor">Картины акварелью</option>
+            </select>
+        </div>
+        <div class="artwork">
+            <div class="artwork-item" data-category="availableArt oil" data-price="500">
+                <img src="/images/flow1.jpg" alt="Произведение искусства 1">
+                <div class="artwork-details">
+                    <h2>Название произведения искусства 1</h2>
+                    <p>Описание произведения искусства 1. Это подробное описание произведения искусства.</p>
+                    <p>Размер: 50x70 см</p>
+                    <p>Цена: 500$</p>
+                </div>
+            </div>
+
+            <div class="artwork-item" data-category="availableArt" data-price="600">
+                <img src="/images/flow2.jpg" alt="Произведение искусства 2">
+                <div class="artwork-details">
+                    <h2>Название произведения искусства 2</h2>
+                    <p>Описание произведения искусства 2. Это подробное описание произведения искусства.</p>
+                    <p>Размер: 80x90 см</p>
+                    <p>Цена: 600$</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="no-results-message" class="hidden">Работы для выбранной категории не найдены.</div>
+    </main>
+
+    <div class="modal" id="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="share-container">
+                <p id="share-text" class="share-button">Поделиться</p>
+                <div class="share-menu">
+                    <div class="share-arrow"></div>
+                    <ul>
+                        <li><a href="#" onclick="shareToFacebook()"><img src="/images/icon-facebook.png" alt="Facebook">Поделиться на Facebook</a></li>
+                        <li><a href="#" onclick="shareToInstagram()"><img src="/images/icon-instagram.png" alt="Instagram">Поделиться на Instagram</a></li>
+                        <li><a href="#" onclick="shareToTwitter()"><img src="/images/icon-twitterx.png" alt="Twitter">Поделиться на Twitter</a></li>
+                        <li><a href="#" onclick="shareToPinterest()"><img src="/images/icon-pinterest.png" alt="Pinterest">Поделиться на Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul>
+                        <li><a href="https://www.facebook.com" target="_blank"><img src="/images/icon-facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><img src="/images/icon-instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://www.whatsapp.com" target="_blank"><img src="/images/icon-whatsapp.png" alt="WhatsApp"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="/js/work.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
