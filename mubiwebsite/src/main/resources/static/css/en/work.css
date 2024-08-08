@@ -547,7 +547,7 @@ body {
     font-family: 'Hauora', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1E2629; 
+    background-color: #1B1818; 
     color: #FFF9F9;
 }
 
@@ -556,7 +556,7 @@ body {
     width: 1440px;
     height: 800px;
     margin: 0 auto;
-    background-color: #1E2629;
+    background-color: #1B1818;
     position: relative; 
 }
 
@@ -568,7 +568,7 @@ body {
     width: 1350;
     height: 37px;
     padding: 20px 20px;
-    background-color: #1E2629;
+    background-color: #1B1818;
     position: relative;
     top: 20;
     left: 20;
@@ -612,7 +612,21 @@ body {
     font-weight: 400; 
     line-height: 100%; 
     text-decoration: none; 
-}    
+    position: relative;
+}   
+
+.navigation ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #FFF9F9;
+}
 
 .language-switcher {
     position: absolute;
@@ -640,7 +654,7 @@ body {
     width: calc(100% - 40px);
     height: 1px;
     background: #FFF9F9;
-    margin: 21px 20px 0 20px; /* Отступ сверху */
+    margin: 21px 20px 0 20px;
     display: block;
 }
 
@@ -678,3 +692,211 @@ body {
     clip-path: url(#arc-clip);
 }
 
+/* Стили для заголовка */
+.title-container {
+    position: absolute;
+    top: 301px;
+    left: 326px;
+    width: 750px;
+    height: 200px;
+}
+
+.title {
+    font-size: 180px;
+    font-weight: 300;
+    line-height: 180px;
+    position: absolute;
+    top: 0px;
+    left: 164px;
+    margin: 0;
+}
+
+.title-p {
+    font-size: 200px;
+    font-family: 'Miama Nueva', serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #FFF9F9;
+    line-height: 200px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+/* Стили для подзаголовка */
+.subtitle-container {
+    position: absolute;
+    top: 506px; 
+    left: 883px; /* Позиционирование слева */
+    width: 374px; 
+    height: 16px; 
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0; 
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Стили для галереи */
+.gallery-container {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative; 
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    position: relative; 
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: absolute; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для первых шести элементов */
+.item-1 {
+    width: 670px;
+    height: 460px;
+    top: 152px;
+    left: 558px;
+    border-radius: 0px 200px 0px 200px;
+}
+
+.item-2 {
+    width: 325px;
+    height: 400px;
+    top: 292px;
+    left: 40px;
+}
+
+.item-3 {
+    width: 498px;
+    height: 323px;
+    top: 782px;
+    left: 385px;
+}
+
+.item-4 {
+    width: 325px;
+    height: 400px;
+    top: 944px;
+    left: 1075px;
+    border-radius: 0px 0px 0px 150px;
+}
+
+.item-5 {
+    width: 325px;
+    height: 400px;
+    top: 1195px;
+    left: 40px;
+    border-radius: 0px 150px 0px 0px;
+}
+
+.item-6 {
+    width: 325px;
+    height: 400px;
+    top: 1395px;
+    left: 558px;
+}
+
+/* Стили для следующих элементов */
+.item-7 {
+    width: 670px;
+    height: 460px;
+    top: 1935px;
+    left: 558px;
+    border-radius: 0px 200px 0px 200px;
+}
+
+.item-8 {
+    width: 325px;
+    height: 400px;
+    top: 2095px;
+    left: 40px;
+}
+
+.item-9 {
+    width: 498px;
+    height: 323px;
+    top: 2585px;
+    left: 385px;
+}
+
+.item-10 {
+    width: 325px;
+    height: 400px;
+    top: 2747px;
+    left: 1075px;
+    border-radius: 0px 0px 0px 150px;
+}
+
+.item-11 {
+    width: 325px;
+    height: 400px;
+    top: 2998px;
+    left: 40px;
+    border-radius: 0px 150px 0px 0px;
+}
+
+.item-12 {
+    width: 325px;
+    height: 400px;
+    top: 3198px;
+    left: 558px;
+}
+
+.item-13 {
+    width: 670px;
+    height: 460px;
+    top: 3738px;
+    left: 558px;
+    border-radius: 0px 200px 0px 200px;
+}
+
+.item-14 {
+    width: 325px;
+    height: 400px;
+    top: 3898px;
+    left: 40px;
+}
+
+#view-more-btn {
+    width: 152px;
+    height: 40px;
+    background-color: #1B1818;
+    color: #F5F5F5;
+    border: 1px solid #C74B4B;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin: 20px auto; 
+    display: block; 
+    position: absolute;
+    top: 1814px;
+    left: 1248px;
+}
+
+#view-more-btn .icon-left,
+#view-more-btn .icon-right {
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+}

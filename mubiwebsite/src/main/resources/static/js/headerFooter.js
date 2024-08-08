@@ -17,6 +17,16 @@ class SpecialHeader extends HTMLElement {
             </div>
         </div>
         <div class="header-line"></div>`;
+        this.highlightActiveLink();
+    }
+
+    highlightActiveLink() {
+        const links = this.querySelectorAll('.navigation a');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
     }
 }
 
@@ -41,6 +51,16 @@ class SpecialHeaderRU extends HTMLElement {
             </div>
         </div>
         <div class="header-line"></div>`;
+        this.highlightActiveLink();
+    }
+
+    highlightActiveLink() {
+        const links = this.querySelectorAll('.navigation a');
+        links.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
     }
 }
 
