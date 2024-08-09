@@ -755,13 +755,16 @@ body {
     justify-content: center;
     gap: 20px;
     position: relative; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
 }
 
 .gallery-item {
     width: 200px;
     height: 200px;
-    overflow: hidden;
     position: absolute; 
+    list-style-type: none;
 }
 
 .gallery-item img {
@@ -875,6 +878,104 @@ body {
     height: 400px;
     top: 3898px;
     left: 40px;
+}
+.item-15 {
+    width: 498px;
+    height: 323px;
+    top: 4388px;
+    left: 385px;
+}
+
+.item-16 {
+    width: 325px;
+    height: 400px;
+    top: 4550px;
+    left: 1075px;
+    border-radius: 0px 0px 0px 150px;
+}
+
+.item-17 {
+    width: 325px;
+    height: 400px;
+    top: 4801px;
+    left: 40px;
+    border-radius: 0px 150px 0px 0px;
+}
+
+.item-18 {
+    width: 325px;
+    height: 400px;
+    top: 5001px;
+    left: 558px;
+}
+
+.item-19 {
+    width: 670px;
+    height: 460px;
+    top: 5541px;
+    left: 558px;
+    border-radius: 0px 200px 0px 200px;
+}
+
+.item-20 {
+    width: 325px;
+    height: 400px;
+    top: 5701px;
+    left: 40px;
+}
+
+.item-21 {
+    width: 498px;
+    height: 323px;
+    top: 6191px;
+    left: 385px;
+}
+
+.item-22 {
+    width: 325px;
+    height: 400px;
+    top: 6353px;
+    left: 1075px;
+    border-radius: 0px 0px 0px 150px;
+}
+
+.item-23 {
+    width: 325px;
+    height: 400px;
+    top: 6604px;
+    left: 40px;
+    border-radius: 0px 150px 0px 0px;
+}
+
+.item-24 {
+    width: 325px;
+    height: 400px;
+    top: 6804px;
+    left: 558px;
+}
+
+.image-title {
+    margin-top: 10px;
+    font-size: 16px; 
+    font-weight: 400;
+    color: #F5F5F5;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block; 
+    background-color: transparent; 
+}
+
+.image-description {
+    font-family: 'Miama Nueva', serif; 
+    font-size: 16px; 
+    font-weight: 400; 
+    font-style: italic;
+    color: #F5F5F5; 
+    text-align: right; /* Выравнивание по правому краю */
+    margin-top: 5px; /* Отступ сверху */
+    opacity: 0.7; /* Прозрачность */
+    display: block; /* Отображение как блочный элемент */
 }
 
 #view-more-btn {
