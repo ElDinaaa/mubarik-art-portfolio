@@ -771,6 +771,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
 }
 
 /* Стили для первых шести элементов */
@@ -966,7 +967,7 @@ body {
     background-color: transparent; 
 }
 
-.image-description {
+.image-material {
     font-family: 'Miama Nueva', serif; 
     font-size: 16px; 
     font-weight: 400; 
@@ -1000,4 +1001,80 @@ body {
     width: 18px;
     height: 18px;
     margin: 0 5px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для контейнера модального контента */
+.modal {
+    display: none; /* По умолчанию скрыто */
+    position: absolute; /* Абсолютное позиционирование */
+    width: 1055px; /* Ширина модального окна */
+    height: 849px; /* Высота модального окна */
+    top: 1155px; /* Отступ сверху */
+    left: 193px; /* Отступ слева */
+    background-color: #1E2629; /* Цвет фона */
+    border: 1px solid #C74B4B; /* Красная граница */
+    z-index: 1000; /* Выводим на передний план */
+    padding: 1px; /* Минимальный padding */
+    box-sizing: border-box; /* Учет границ и отступов */
+    display: flex; /* Включаем flex-контейнер */
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
+}
+
+/* Стили для изображения внутри модального окна */
+.modal-content img {
+    width: 690px;  /* Ширина изображения */
+    height: 439px;  /* Высота изображения */
+    border: 1px solid #C74B4B;  /* Граница изображения */
+    box-sizing: border-box;  /* Учитываем границу и отступы */
+    display: block;  /* Изображение будет блоком */
+    margin: 0 auto;  /* Центрируем изображение внутри контейнера */
+}
+
+.modal-content .text-container {
+    margin-top: 20px;
+    color: #FFF9F9;
+}
+
+.modal-content .text-container h3 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.modal-content .text-container p {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-content .text-container .modal-medium {
+    font-family: 'Miama Nueva', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: #C74B4B;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #FFF;
+    cursor: pointer;
 }
