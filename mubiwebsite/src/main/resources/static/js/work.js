@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
             src: 'image23.jpg', 
             title: '«Название картины»', 
             material: 'чем написана',
-            description: 'Описание картины 23' },
+            description: 'Описание картины ' },
     ];
 
     loadMoreBtn.addEventListener('click', () => {
