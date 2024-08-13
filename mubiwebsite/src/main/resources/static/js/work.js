@@ -170,12 +170,20 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.innerHTML = `
         <span class="close-btn">&times;</span>
         <div class="modal-content">
-            <img src="" alt="">
-            <div class="text-container">
-                <h3 class="modal-title"></h3>
-                <p class="modal-material"></p>
-                <p class="modal-description"></p>
+            <div class="rectangle">
+                <img src="" alt="">
+                <div class="text-container">
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-material"></p>
+                    <p class="modal-description"></p>
+                </div>
+                <div class="rectangle-material">
+                    <p class="modal-material"></p> 
+                </div>
             </div>
+            <div class="line-element"></div> <!-- Новая линия -->
+            <div class="vertical-line-element"></div> <!-- Новая вертикальная линия -->
+            <div class="new-rectangle"></div> <!-- Новый прямоугольник -->
         </div>`;
     document.body.appendChild(modal);
 
