@@ -113,13 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Функция для валидации имени
+    // Функция для валидации имени (учитывает русские и латинские буквы)
     function validateName(name) {
-        const re = /^[A-Za-z\s]+$/;
+        const re = /^[A-Za-zА-Яа-яЁё\s]+$/;
         return re.test(String(name));
     }
 
-    // Функция для валидации email
+    // Функция для валидации email (оставляем без изменений)
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(String(email).toLowerCase());

@@ -206,6 +206,13 @@ body {
     text-transform: uppercase; 
 }
 
+/* Ссылка внутри .go-to-portfolio */
+.go-to-portfolio a {
+    text-decoration: none; 
+    color: #FFF9F9; 
+    display: inline-block; 
+}
+
 .go-to-portfolio-line {
     position: absolute;
     top: 678px;
