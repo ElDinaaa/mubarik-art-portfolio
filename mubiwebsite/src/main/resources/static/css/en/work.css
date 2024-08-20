@@ -656,17 +656,18 @@ body {
     left: 710px;  
     width: 325px;  
     height: 50px;  
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
     border: 1px solid #C74B4B; 
     border-radius: 25px; 
     background-color: transparent; 
-    color: #F5F5F5; 
-    font-size: 16px;
-    font-weight: 400;
+    color: #F5F5F5;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     cursor: pointer; 
-    padding: 0 56px;  
+    padding: 0 47px;  
     gap: 10px; 
 }
 

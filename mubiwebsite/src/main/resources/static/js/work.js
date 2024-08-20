@@ -84,9 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="new-rectangle">
                         <p class="second-description"></p> <!-- Второе описание картины -->
                         <button class="order-now-btn">
-                            <span class="star-icon"></span>
                             Order now
-                            <span class="star-icon"></span>
                         </button>
                     </div> 
                 </div>

@@ -6,109 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Contact - Mubarik Elmurzaeva</title>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="/css/contact.css">
-    <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico">
+    <link rel="stylesheet" href="/css/en/contact.css">
+    <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico"> <!-- Ваш собственный фавикон -->
     <link rel="canonical" href="http://mubarikelmurzaeva.com">
     <meta property="og:site_name" content="Mubarik Elmurzaeva">
-    <meta property="og:title" content="Contact - Mubarik Elmurzaeva">
-    <meta property="og:url" content="http://mubarikelmurzaeva.com/contact">
+    <meta property="og:title" content="Contact - Elmurzaeva">
+    <meta property="og:url" content="http://mubarikelmurzaeva.com">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Contact - Mubarik Elmurzaeva">
-    <meta itemprop="url" content="http://mubarikelmurzaeva.com/contact">
-    <meta name="twitter:title" content="Contact - Mubarik Elmurzaeva">
-    <meta name="twitter:url" content="http://mubarikelmurzaeva.com/contact">
+    <meta itemprop="name" content="Contact - Elmurzaeva">
+    <meta itemprop="url" content="http://mubarikelmurzaeva.com">
+    <meta name="twitter:title" content="Contact - Elmurzaeva">
+    <meta name="twitter:url" content="http://mubarikelmurzaeva.com">
     <meta name="twitter:card" content="summary">
     <meta name="description" content="Get in touch with Mubarik Elmurzaeva. Contact for inquiries and art purchases.">
-
-    <script src="/js/language-switcher.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="branding">
-                <h1><a href="/en/index">MUBARIK ELMURZAEVA</a></h1>
-            </div>
-            <nav>
-                <div class="hamburger" id="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+    <div class="page-container">
+        <special-header></special-header>
+        
+        <div class="contact-container">
+            <img src="/images/image23.jpg" alt="Background Image" class="background-image">
+            <div class="contact-header">
+                <div class="contact-title">
+                    <span class="contact-c">C</span>
+                    <span class="contact-ont">ont</span>
+                    <div class="contact-dash"></div>
+                    <span class="contact-act">act me</span>
                 </div>
-                <ul id="nav-links">
-                    <li><a href="/en/index">Home</a></li>
-                    <li><a href="/en/work">Work</a></li>
-                    <li><a href="/en/about">About me</a></li>
-                    <li><a href="/en/contact" class="active">Contact</a></li>
-                    <li class="language-switcher">
-                        <a href="/en/index" id="lang-en">English</a> | <a href="/ru/index" id="lang-ru">Русский</a>
-                    </li>
-                    <div class="hamburger close-menu" id="close-menu"></div>
-                </ul>
-            </nav>
+                <p class="contact-text">Drop me a line if you want to learn more or purchase my art.</p>
+            </div>
+
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <input type="text" name="name" id="name" placeholder="NAME*" required>
+                        <input type="email" name="email" id="email" placeholder="EMAIL*" required>
+                    </div>
+                    <input type="message" name="message" id="message" placeholder="MESSAGE" required>
+                    <div id="formMessage"></div> 
+                    <button type="submit" class="send-btn">Send</button>
+                </form>
+            </div>
         </div>
-    </header>
 
-    <main>
-        <section class="contact-info">
-            <h2>Contact me if you have questions or you're willing to purchase my art.</h2>
-            <div class="contact-image">
-                <img src="/images/contact-pic.jpg" alt="Artwork">
-            </div>
-        </section>
-        <section class="contact-form" autocomplete="off">
-            <form id="contactForm" action="#" method="post">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5"  required></textarea>
-
-                <button type="submit">Send</button>
-                <div class="form-message-container">
-                    <div id="formMessage"></div>
-                </div>
-            </form>
-        </section>
-    </main>
-
-    <div class="modal" id="modal">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
+        <special-footer></special-footer>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div class="share-container">
-                <p id="share-text" class="share-button">Share</p>
-                <div class="share-menu">
-                    <div class="share-arrow"></div> 
-                    <ul>
-                        <li><a href="#" onclick="shareToFacebook()"><img src="/images/icon-facebook.png" alt="Facebook">Share to Facebook</a></li>
-                        <li><a href="#" onclick="shareToInstagram()"><img src="/images/icon-instagram.png" alt="Instagram">Share to Instagram</a></li>
-                        <li><a href="#" onclick="shareToTwitter()"><img src="/images/icon-twitterx.png" alt="Twitter">Share to Twitter</a></li>
-                        <li><a href="#" onclick="shareToPinterest()"><img src="/images/icon-pinterest.png" alt="Pinterest">Share to Pinterest</a></li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <ul>
-                        <li><a href="https://www.facebook.com" target="_blank"><img src="/images/icon-facebook.png" alt="Facebook"></a></li> <!-- Добавить ссылку на фейсбук -->
-                        <li><a href="https://www.instagram.com" target="_blank"><img src="/images/icon-instagram.png" alt="Instagram"></a></li> <!-- Добавить ссылку на инсту-->
-                        <li><a href="https://www.whatsapp.com" target="_blank"><img src="/images/icon-whatsapp.png" alt="WhatsApp"></a></li> <!-- Добавить ссылку на ватс -->
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/js/script.js"></script>
-    <script src="/js/contact.js"></script>
+    <script src="/js/headerFooter.js" defer></script> 
+    <script src="/js/language-switcher.js" defer></script> 
+    <script src="/js/contact.js" defer></script>
 </body>
 </html>

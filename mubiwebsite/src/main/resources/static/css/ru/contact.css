@@ -203,7 +203,7 @@ body {
     line-height: 128px;
     font-weight: 500;
     font-family: 'Hauora', sans-serif;
-    width: 453px;
+    width: 342px;
     height: 128px;
     color: #f5f5f5;
     position: absolute;
@@ -224,7 +224,7 @@ body {
     left: 690px;
     margin-right: 40px;
     text-align: left;
-    width: 275px;
+    width: 325px;
     height: 32px;
     text-transform: uppercase;
     opacity: 0.8;
@@ -297,7 +297,7 @@ body {
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    padding: 0 67.5px;
+    padding: 0 44px;
 }
 
 .send-btn:hover {
@@ -315,13 +315,6 @@ body {
     display: inline-block;
 }
 
-.send-btn::before {
-    margin-right: 56px;
-}
-
-.send-btn::after {
-    margin-left: 56px;
-}
 
 .footer-container {
     margin-top: auto; 

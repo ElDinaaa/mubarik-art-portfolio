@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Если все поля валидны, отправляем данные формы на сервер
         if(isValid) {
             formMessage.innerHTML = 'Sending...';
-            formMessage.style.color = 'blue';
+            formMessage.style.color = 'white';
 
             fetch('/contact', {
                 method: 'POST',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.success) {
                     formMessage.textContent = 'Message sent successfully!';
-                    formMessage.style.color = 'green';
+                    formMessage.style.color = 'white';
                     form.reset();
                 } else {
                     formMessage.textContent = 'There was an error submitting your message.';
