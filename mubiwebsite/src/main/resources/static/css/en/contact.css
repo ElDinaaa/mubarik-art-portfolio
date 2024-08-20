@@ -251,7 +251,12 @@ body {
     justify-content: space-between;
     margin-bottom: 33px;
     width: 325px;
-    gap: 25px;
+    gap: 12.5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(245, 245, 245, 0.4); 
 }
 
 .contact-form input[type="text"],
@@ -260,27 +265,48 @@ body {
     border: none; 
     border-bottom: 1px solid rgba(245, 245, 245, 0.4);
     background-color: transparent;
-    color: rgba(245, 245, 245, 0.4); 
+    color: #f5f5f5; 
     font-size: 16px;
     line-height: 16px;
     outline: none; 
 }
 
-.contact-form input[type="message"] {
+.contact-form textarea {
     width: 325px;
     padding-bottom: 60px;
     border: none;
     border-bottom: 1px solid rgba(245, 245, 245, 0.4);
     background-color: transparent;
-    color: rgba(245, 245, 245, 0.4);
+    color: #f5f5f5;
     font-size: 16px;
     line-height: 16px;
     outline: none;
 }
 
+#error {
+    color: #C74B4B;
+    font-size: 14px;
+    margin-top: 5px;
+    height: 16px; 
+    opacity: 0.8;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #1B1818 inset; /* Задает фон инпута при автозаполнении */
+    -webkit-text-fill-color: #f5f5f5; /* Задает цвет текста при автозаполнении */
+}
+
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #1B1818 inset; /* Цвет фона для автозаполненных полей */
+    -webkit-text-fill-color: #f5f5f5; /* Цвет текста для автозаполненных полей */
+}
+
 .send-btn {
-    position: relative;
-    top: 100px;
+    position: absolute;
+    top: 243px;
     left: 0;
     background-color: transparent;
     color: #f5f5f5;
