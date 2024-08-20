@@ -1,0 +1,699 @@
+@font-face {
+    font-family: 'Miama Nueva';
+    src: url('/fonts/miama/miama.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hauora';
+    src: url('/fonts/hauora_sans/fonts/otf/Hauora-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Hauora', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1B1818; 
+    color: #FFF9F9;
+}
+
+.page-container {
+    width: 1440px;
+    height: 3800px;
+    margin: 0 auto;
+    background-color: #1B1818;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1350;
+    height: 37px;
+    padding: 20px 20px;
+    background-color: #1B1818;
+    position: relative;
+    top: 20;
+    left: 20;
+    box-sizing: border-box; 
+}
+
+.logo {
+    position: relative; 
+    top: 10px; 
+    margin-right: 690px;
+}
+
+.logo a {
+    color: #FFF9F9;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 19.36px;
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    top: 20px; 
+    left: 730px; 
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation ul li a {
+    color: #FFF9F9; 
+    font-size: 16px; 
+    font-style: normal;
+    font-weight: 400; 
+    line-height: 100%; 
+    text-decoration: none; 
+    position: relative;
+}   
+
+.navigation ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 5px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #FFF9F9;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    font-size: 16px; 
+    color: #FFF9F9; 
+}
+
+.language-switcher a {
+    text-decoration: none; 
+    color: #FFF9F9; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.36px;
+    margin: 0 5px; 
+}
+
+.language-switcher a:hover {
+    text-decoration: underline; 
+}
+
+.header-line {
+    width: calc(100% - 40px);
+    height: 1px;
+    background: #FFF9F9;
+    margin: 21px 20px 0 20px;
+    display: block;
+}
+
+.about-header {
+    position: absolute;
+    width: 1086px;
+    top: 167px;
+    left: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-image {
+    position: absolute;
+    left: 230px;
+    top: 9px;
+    width: 440px;
+    height: 526px;
+    border: 1px solid #C74B4B; 
+    border-radius: 0px 220px 0px 220px; 
+    opacity: 0.8; 
+    object-fit: cover; 
+}
+
+.title-container {
+    position: absolute;
+    left: 0;
+    top: 87px;
+    transform: translateX(-50%);
+    color: #FFF9F9;
+}
+
+.title {
+    font-family: 'Miama Nueva', serif;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+.title-a {
+    font-family: 'Miama Nueva', serif;
+    font-size: 180px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 180px; 
+    color: #C74B4B; 
+    position: absolute;
+    top: 12px; 
+    left: 0; 
+    width: 166px; 
+    height: 180px; 
+}
+
+.title-bout {
+    font-family: 'Hauora', sans-serif;
+    font-size: 120px; 
+    font-weight: 400; 
+    line-height: 120px; 
+    color: #FFF9F9; 
+    position: absolute;
+    top: 0; 
+    left: 176px; 
+    width: 224px; 
+    height: 120px;
+    text-transform: uppercase;
+}
+
+.title-m {
+    font-family: 'Miama Nueva', serif;
+    font-size: 180px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 180px; 
+    color: #FFF9F9; 
+    position: absolute;
+    top: 180px; 
+    left: 449px; 
+    width: 237px; 
+    height: 180px; 
+}
+
+.title-ubarik {
+    font-family: 'Hauora', sans-serif;
+    font-size: 120px; 
+    font-weight: 400; 
+    line-height: 120px; 
+    color: #FFF9F9; 
+    position: absolute;
+    top: 182px; 
+    left: 677px; 
+    width: 447px; 
+    height: 120px; 
+    text-transform: uppercase;
+}
+
+.about-content {
+    position: absolute;
+    top: 775px; 
+    left: 258px; 
+    width: 1119px; 
+    height: 182px; 
+    text-align: center; 
+}
+
+.intro-text {
+    font-family: 'Hauora', sans-serif;
+    font-size: 36px; 
+    font-weight: 400; 
+    line-height: 43.2px; 
+    letter-spacing: -0.02em;
+    color: #FFF9F9; 
+    position: relative;
+    top: 0; 
+    left: 12px; 
+    width: 900px; 
+    height: 129px;
+    text-align: center; 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.specialization-text {
+    position: relative;
+    top: 0; 
+    left: 0px; 
+    width: 100%; 
+    height: auto; 
+    font-family: 'Hauora', sans-serif;
+    font-size: 36px; 
+    font-weight: 400; 
+    line-height: 43.2px; 
+    letter-spacing: -0.02em;
+    color: #FFF9F9; 
+    text-align: left; 
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.highlighted-text {
+    font-family: 'Miama Nueva', serif; 
+    font-size: 40px; 
+    font-weight: 400; 
+    font-style: italic; 
+    line-height: 40px; 
+    color: #C74B4B; 
+    margin-left: 15px;
+    display: inline-block; 
+    text-transform: lowercase;
+    letter-spacing: normal;
+    margin-left: 10px;
+}
+
+/* Стили для заголовка и описания секции выставок */
+.exhibitions-container {
+    position: absolute;
+    top: 1114px; 
+    left: 40px; 
+    height: auto; 
+}
+
+.exhibitions-header {
+    text-align: center;
+    position: relative;
+    top: 0;
+    left: 700px;
+}
+
+.exhibitions-title {
+    font-family: 'Miama Nueva', serif;
+    font-size: 40px; 
+    font-weight: 400;
+    font-style: italic;
+    line-height: 40px;
+    color: #FFF9F9; 
+    position: relative;
+    top: 0; 
+    left: 0;
+    width: 213px; 
+    height: 40px; 
+    text-align: center; 
+    margin: 0;
+}
+
+.exhibitions-description {
+    font-family: 'Hauora', sans-serif; 
+    font-size: 16px; 
+    font-weight: 400; 
+    line-height: 16px; 
+    color: #F5F5F5; 
+    position: relative;
+    top: 10px; 
+    left: 0; 
+    margin: 0;
+    width: 349px; 
+    height: 32px; 
+    text-align: left;
+}
+
+/* Стили для каждой выставки */
+.exhibition-item1 {
+    position: absolute;
+    top: 70px;
+    margin-bottom: 50px; 
+    text-align: left; 
+}
+
+.exhibition-date-container1 {
+    position: relative;
+    top: 0;
+    height: 24px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.exhibition-line1 {
+    position: relative;
+    top: 6px;
+    width: 323px;  
+    height: 1px; 
+    background-color: #FFF9F9; 
+    margin-right: 50px;
+}
+
+.exhibition-date1 {
+    font-family: 'Miama Nueva', serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #C74B4B;
+    position: relative;
+    top: 0px;
+    margin: 0;
+}
+
+.exhibition-image1 {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+.exhibition-name1 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin: 0;
+}
+
+.exhibition-city1 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin-top: 5px; 
+    opacity: 0.6;
+}
+
+.exhibition-item2 {
+    position: absolute;
+    top: 322px;
+    left: 960px;
+    margin-bottom: 50px;
+    text-align: left; 
+}
+
+.exhibition-date-container2 {
+    position: relative;
+    top: 0;
+    height: 24px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.exhibition-line2 {
+    position: relative;
+    top: 6px;
+    width: 323px;  
+    height: 1px;  
+    background-color: #FFF9F9; 
+    margin-right: 50px;
+}
+
+.exhibition-date2 {
+    font-family: 'Miama Nueva', serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #C74B4B;
+    position: relative;
+    top: 0;
+    margin: 0;
+}
+
+.exhibition-image2 {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+.exhibition-name2 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin: 0;
+}
+
+.exhibition-city2 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin-top: 5px; 
+    opacity: 0.6;
+}
+
+.exhibition-item3 {
+    position: absolute;
+    left: 270px;
+    top: 715px;
+    margin-bottom: 50px; 
+    text-align: left; 
+}
+
+.exhibition-date-container3 {
+    position: relative;
+    top: 0;
+    height: 24;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.exhibition-line3 {
+    position: relative;
+    top: 6px;
+    width: 323px;  
+    height: 1px;  
+    background-color: #FFF9F9; 
+    margin-right: 50px;
+}
+
+.exhibition-date3 {
+    font-family: 'Miama Nueva', serif;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: #C74B4B;
+    position: relative;
+    top: 0;
+    margin: 0;
+}
+
+.exhibition-image3 {
+    position: relative;
+    width: 440px;
+    height: 450px;
+    object-fit: cover; 
+    margin-bottom: 10px; 
+}
+
+.exhibition-name3 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin: 0;
+}
+
+.exhibition-city3 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #FFF9F9;
+    margin-top: 5px; 
+    opacity: 0.6;
+}
+
+.awards-section {
+    text-align: center;
+    position: absolute;
+    top: 2526px;
+    left: 270px; 
+}
+
+.awards-title {
+    font-family: 'Miama Nueva', serif;
+    font-size: 40px; 
+    font-weight: 400;
+    font-style: italic;
+    line-height: 40px;
+    color: #FFF9F9; 
+    position: relative;
+    top: 0; 
+    left: 460px;
+    margin: 0;
+    text-align: left;
+    width: fit-content;
+}
+
+.awards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+.award-item1 {
+    width: 440px;
+    height: 160px;
+    border: 1px solid #C74B4B;
+    border-radius: 0px 180px 0px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.award-item2 {
+    width: 440px;
+    height: 160px;
+    border: 1px solid #C74B4B;
+    border-radius: 180px 0px 180px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.award-item3 {
+    width: 440px;
+    height: 160px;
+    border: 1px solid #C74B4B;
+    border-radius: 180px 0px 180px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.award-item4 {
+    width: 440px;
+    height: 160px;
+    border: 1px solid #C74B4B;
+    border-radius: 0px 180px 0px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.award-text {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.philosophy-container {
+    position: absolute;
+    top: 3091px;
+    left: 40px;
+    text-align: left;
+}
+
+.philosophy-title {
+    font-family: 'Miama Nueva', serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 40px;
+    color: #FFF9F9;
+    position: relative;
+    left: 690px;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+
+.philosophy-content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #612727; 
+    border-radius: 194px; 
+    position: relative;
+    width: 1360px;
+    height: 388px;
+}
+
+.philosophy-image {
+    width: 567px;
+    height: 388px;
+    border-radius: 194px 200px 200px 194px; 
+    object-fit: cover;
+    margin-right: 123px;
+}
+
+.philosophy-text {
+    color: #F5F5F5;
+    font-family: 'Hauora', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+    width: 440px;
+}
+
+.philosophy-text p {
+    margin-top: 42px;
+    margin-bottom: 40px;
+    height: 120px;
+}
+
+.philosophy-text p:last-child {
+    margin-top: 0;
+    margin-bottom: 42px;
+    height: 144px;
+}
+
+.footer-container {
+    margin-top: auto; 
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0; 
+    margin-bottom: 20px;
+}
+
+.footer-line {
+    width: 100%; 
+    height: 1px;
+    background-color: #C74B4B;
+    margin: 0 auto 0;
+}
+
+.social-icons {
+    display: flex;
+    position: relative;
+    right: 40px;
+    top: 18px;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 21px;
+    height: 21px;
+}

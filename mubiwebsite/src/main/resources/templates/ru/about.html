@@ -1,111 +1,130 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<html lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Обо мне - Мубарик Эльмурзаева</title>
-
+    <title>About - Mubarik Elmurzaeva</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <link rel="stylesheet" href="/css/about.css">
-    <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico">
+    <link rel="stylesheet" href="/css/ru/about.css">
+    <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico"> <!-- Ваш собственный фавикон -->
     <link rel="canonical" href="http://mubarikelmurzaeva.com">
-    <meta property="og:site_name" content="Мубарик Эльмурзаева">
-    <meta property="og:title" content="Обо мне - Мубарик Эльмурзаева">
-    <meta property="og:url" content="http://mubarikelmurzaeva.com/ru/about">
+    <meta property="og:site_name" content="Mubarik Elmurzaeva">
+    <meta property="og:title" content="About - Elmurzaeva">
+    <meta property="og:url" content="http://mubarikelmurzaeva.com">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Обо мне - Мубарик Эльмурзаева">
-    <meta itemprop="url" content="http://mubarikelmurzaeva.com/ru/about">
-    <meta name="twitter:title" content="Обо мне - Мубарик Эльмурзаева">
-    <meta name="twitter:url" content="http://mubarikelmurzaeva.com/ru/about">
+    <meta itemprop="name" content="About - Elmurzaeva">
+    <meta itemprop="url" content="http://mubarikelmurzaeva.com">
+    <meta name="twitter:title" content="About - Elmurzaeva">
+    <meta name="twitter:url" content="http://mubarikelmurzaeva.com">
     <meta name="twitter:card" content="summary">
-    <meta name="description" content="Узнайте больше о Мубарик Эльмурзаевой, ее биографии, наградах и выставках.">
-
-    <script src="/js/language-switcher.js" defer></script>
+    <meta name="description" content="Откройте для себя искусство Мубарик Эльмурзаевой. Исследуйте галерею, узнайте больше об авторе и свяжитесь с ней.">
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="branding">
-                <h1><a href="/ru/index">Мубарик Эльмурзаева</a></h1>
-            </div>
-            <nav>
-                <div class="hamburger" id="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <ul id="nav-links">
-                    <li><a href="/ru/index">Главная</a></li>
-                    <li><a href="/ru/work">Работы</a></li>
-                    <li><a href="/ru/about" class="active">Обо мне</a></li>
-                    <li><a href="/ru/contact">Контакты</a></li>
-                    <li class="language-switcher">
-                        <a href="/en/index" id="lang-en">English</a> | <a href="/ru/index" id="lang-ru">Русский</a>
-                    </li>
-                    <div class="hamburger close-menu" id="close-menu">
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main>
-        <section class="biography">
-            <h2>Биография</h2>
-            <div class="content">
-                <div class="text">
-                    <p>Текст о биографии... очень длинный текст о биографии блабла бла бла блаблабла</p>
-                </div>
-                <div class="photo">
-                    <img src="/images/mubi.jpg" alt="Фото Мубарик">
-                </div>
+<body>
+    <div class="page-container">
+        <special-header-ru></special-header-ru>
+
+        <!-- Блок с изображением и заголовком -->
+        <div class="about-header">
+            <img src="/images/image11.jpg" alt="About Mubarik" class="about-image">
+            <div class="title-container">
+                <h1 class="title">
+                    <span class="title-a">П</span>
+                    <span class="title-bout">уть</span>
+                    <span class="title-m">М</span>
+                    <span class="title-ubarik">убарик</span>
+                </h1>
             </div>
-        </section>
-    
-        <section class="awards">
-            <h2>Награды</h2>
-            <p>Подробности о наградах... очень длинный текст о биографии блабла бла бла блаблабла</p>
-        </section>
-    
-        <section class="exhibitions">
-            <h2>Выставки</h2>
-            <p>Подробности о выставках... очень длинный текст о биографии блабла бла бла блаблабла</p>
-        </section>
-    </main>
-    
-    <div class="modal" id="modal">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
-    </div>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="share-container">
-                <p id="share-text" class="share-button">Поделиться</p>
-                <div class="share-menu">
-                    <div class="share-arrow"></div> 
-                    <ul>
-                        <li><a href="#" onclick="shareToFacebook()"><img src="/images/icon-facebook.png" alt="Facebook">Поделиться на Facebook</a></li>
-                        <li><a href="#" onclick="shareToInstagram()"><img src="/images/icon-instagram.png" alt="Instagram">Поделиться на Instagram</a></li>
-                        <li><a href="#" onclick="shareToTwitter()"><img src="/images/icon-twitterx.png" alt="Twitter">Поделиться на Twitter</a></li>
-                        <li><a href="#" onclick="shareToPinterest()"><img src="/images/icon-pinterest.png" alt="Pinterest">Поделиться на Pinterest</a></li>
-                    </ul>
+        </div>
+
+        <!-- Текстовый блок -->
+        <div class="about-content">
+            <p class="intro-text">С юных лет меня пленил мир искусства. Я изучала изобразительное искусство в Московской художественной школе,</p>
+            <p class="specialization-text">
+                где специализировлась на
+                <span class="highlighted-text">портретах и арт-ботанике</span>
+            </p>
+        </div>
+
+        <!-- Контейнер для выставок -->
+        <div class="exhibitions-container">
+            <!-- Секция с заголовком и текстом -->
+            <div class="exhibitions-header">
+                <h2 class="exhibitions-title">Выставки</h2>
+                <p class="exhibitions-description">Мои работы были представлены на нескольких закрытых и публичных выставках.</p>
+            </div>
+            
+            <!-- Первая выставка -->
+            <div class="exhibition-item1">
+                <div class="exhibition-date-container1">
+                    <div class="exhibition-line1"></div>
+                    <p class="exhibition-date1">2019</p>
                 </div>
-                <div class="social-links">
-                    <ul>
-                        <li><a href="https://www.facebook.com" target="_blank"><img src="/images/icon-facebook.png" alt="Facebook"></a></li>
-                        <li><a href="https://www.instagram.com" target="_blank"><img src="/images/icon-instagram.png" alt="Instagram"></a></li>
-                        <li><a href="https://www.whatsapp.com" target="_blank"><img src="/images/icon-whatsapp.png" alt="WhatsApp"></a></li>
-                    </ul>
+                <img src="/images/image7.jpg" alt="Exhibition 1" class="exhibition-image1">
+                <p class="exhibition-name1">Музей современного искусства «Гараж»</p>
+                <p class="exhibition-city1">Москва</p>
+            </div>
+
+            <!-- Вторая выставка -->
+            <div class="exhibition-item2">
+                <div class="exhibition-date-container2">
+                    <div class="exhibition-line2"></div>
+                    <p class="exhibition-date2">2020</p>
+                </div>
+                <img src="/images/image12.jpg" alt="Exhibition 2" class="exhibition-image2">
+                <p class="exhibition-name2">Музей современного искусства «Эрарта»</p>
+                <p class="exhibition-city2">Санкт-Петербург</p>
+            </div>
+
+            <!-- Третья выставка -->
+            <div class="exhibition-item3">
+                <div class="exhibition-date-container3">
+                    <div class="exhibition-line3"></div>
+                    <p class="exhibition-date3">2021</p>
+                </div>
+                <img src="/images/image17.jpg" alt="Exhibition 3" class="exhibition-image3">
+                <p class="exhibition-name3">Мультимедиа Арт Музей</p>
+                <p class="exhibition-city3">Москва</p>
+            </div>
+        </div>
+
+            <!-- Контейнер с наградами -->
+        <div class="awards-section">
+            <h2 class="awards-title">Награды</h2>
+            <div class="awards-container">
+                <div class="award-item1">
+                    <p class="award-text">Золотая палитра (2018)</p>
+                </div>
+                <div class="award-item2">
+                    <p class="award-text">Творческий Петербург (2020)</p>
+                </div>
+                <div class="award-item3">
+                    <p class="award-text">Искусство Москвы (2019)</p>
+                </div>
+                <div class="award-item4">
+                    <p class="award-text">Художник года РФ (2022)</p>
                 </div>
             </div>
         </div>
-    </footer>
-    
-    <script src="/js/script.js"></script>
+
+        <div class="philosophy-container">
+            <h2 class="philosophy-title">Моя философия</h2>
+            <div class="philosophy-content">
+                <img src="/images/image5.jpg" alt="Mubarik" class="philosophy-image">
+                <div class="philosophy-text">
+                    <p>Мое искусство исследует человеческие эмоции и красоту в повседневных вещах. Я верю, что искусство способно запечатлеть суть момента, трансформируя взгляды и чувства.</p>
+                    <p>Моя цель — создавать произведения, которые приглашают зрителей увидеть красоту в людях и предметах. Каждая работа напоминает о том, что радость и смысл можно найти в простоте повседневных мгновений.</p>
+                </div>
+            </div>
+        </div>
+
+        <special-footer></special-footer>
+    </div>    
+
+    <script src="/js/headerFooter.js" defer></script> 
+    <script src="/js/language-switcher.js" defer></script> 
 
 </body>
 </html>
