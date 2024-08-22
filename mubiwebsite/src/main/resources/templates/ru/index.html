@@ -7,8 +7,6 @@
 
     <title>Mubarik Elmurzaeva - Портфолио</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Meie+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/ru/styles.css">
     <link rel="icon" type="image/x-icon" href="/path/to/your/favicon.ico"> <!-- Ваш собственный фавикон -->
     <link rel="canonical" href="http://mubarikelmurzaeva.com">
@@ -29,19 +27,26 @@
         <special-header-ru></special-header-ru>
 
         <div class="cover-photo-container">
-            <img src="/images/mainpic.png" alt="Фон картины" class="cover-photo">
+            <picture>
+                <source srcset="/images/mainpic2.png" media="(max-width: 768px)">
+                <img src="/images/mainpic.png" alt="Фон картины" class="cover-photo">
+            </picture>
 
             <div class="bringing-visions">Bringing visions</div>
             <div class="mubarik">Мубарик</div>
             <div class="elmurzaeva">Эльмурзаева</div>
             <div class="to-life">to life</div>
+
+            <div class="bringing-visions-to-life">Bringing visions to life</div>
+
             <div class="go-to-portfolio">
                 <a href="/ru/work" class="go-to-portfolio-link">(ПЕРЕЙТИ В ПОРТФОЛИО)</a>
             </div>
             <div class="go-to-portfolio-line"></div> 
-            
         </div>
     </div>    
+
+    <div class="backdrop"></div>
     
     <script src="/js/headerFooter.js" defer></script> 
     <script src="/js/language-switcher.js" defer></script> 

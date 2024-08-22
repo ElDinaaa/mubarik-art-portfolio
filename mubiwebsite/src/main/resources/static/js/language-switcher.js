@@ -2,19 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const langEn = document.getElementById('lang-en');
     const langRu = document.getElementById('lang-ru');
 
-    langEn.addEventListener('click', () => {
+    langEn.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращает переход по ссылке
         changeLanguage('en');
     });
 
-    langRu.addEventListener('click', () => {
+    langRu.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращает переход по ссылке
         changeLanguage('ru');
     });
 
     function changeLanguage(lang) {
+        let currentUrl = window.location.href;
         if (lang === 'en') {
-            window.location.href = window.location.href.replace('/ru/', '/en/');
+            if (currentUrl.includes('/ru/')) {
+                window.location.href = currentUrl.replace('/ru/', '/en/');
+            } else if (!currentUrl.includes('/en/')) {
+                window.location.href = currentUrl.replace(window.location.pathname, `/en${window.location.pathname}`);
+            }
         } else if (lang === 'ru') {
-            window.location.href = window.location.href.replace('/en/', '/ru/');
+            if (currentUrl.includes('/en/')) {
+                window.location.href = currentUrl.replace('/en/', '/ru/');
+            } else if (!currentUrl.includes('/ru/')) {
+                window.location.href = currentUrl.replace(window.location.pathname, `/ru${window.location.pathname}`);
+            }
         }
     }
 });
