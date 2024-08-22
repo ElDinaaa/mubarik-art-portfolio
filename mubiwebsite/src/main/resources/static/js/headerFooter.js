@@ -5,19 +5,135 @@ class SpecialHeader extends HTMLElement {
             <div class="logo">
                 <a href="/en/index">Mubarik Elmurzaeva</a>
             </div>
-            <nav class="navigation">
+            <div class="language-switcher">
+                <!-- Десктопная версия переключателя языка -->
+                <div class="desktop-lang-switcher">
+                    <a href="/en/index" id="lang-en">EN</a>
+                    <span>|</span>
+                    <a href="/ru/index" id="lang-ru">RU</a>
+                </div>
+
+                <!-- Мобильная версия переключателя языка -->
+                <div class="mobile-lang-switcher">
+                    <button class="lang-btn">
+                        EN 
+                        <svg class="lang-icon" viewBox="0 0 7 7">
+                        <polygon points="0,0 7,0 3.5,7" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="/en/index" id="lang-en">EN</a>
+                        <a href="/ru/index" id="lang-ru">RU</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-icon">
+                <img src="/images/Hamburger.svg" alt="Menu" />
+            </div>
+        </div>
+        <div class="header-line"></div>
+        <nav class="navigation">
+             <ul>
+                 <li><a href="/en/work">Portfolio</a></li>
+                 <li><a href="/en/about">About me</a></li>
+                 <li><a href="/en/contact">Contact</a></li>
+             </ul>
+         </nav>
+
+        <!-- Навигационное меню -->
+        <div class="navigation-panel">
+            <nav class="mobile-navigation">
+                <div class="language-switcher">
+                    <button class="lang-btn">
+                        EN 
+                        <svg class="lang-icon" viewBox="0 0 7 7">
+                            <polygon points="0,0 7,0 3.5,7" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="/en/index" id="lang-en">EN</a>
+                        <a href="/ru/index" id="lang-ru">RU</a>
+                    </div>
+                </div>
+                <div class="menu-icon">
+                    <img src="/images/Hamburger.svg" alt="Menu" />
+                </div>
                 <ul>
                     <li><a href="/en/work">Portfolio</a></li>
                     <li><a href="/en/about">About me</a></li>
                     <li><a href="/en/contact">Contact</a></li>
                 </ul>
+                <div class="social-icons">
+                    <a href="#"><img src="/images/facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="/images/instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="/images/whatsapp.svg" alt="WhatsApp"></a>
+                </div>
             </nav>
-            <div class="language-switcher">
-                <a href="/en/index" id="lang-en">en</a> | <a href="/ru/index" id="lang-ru">ru</a>
-            </div>
-        </div>
-        <div class="header-line"></div>`;
+        </div>`;
+        this.addEventListeners();
         this.highlightActiveLink();
+    }
+
+    addEventListeners() {
+        const menuIcon = document.querySelector('.menu-icon img');
+        const navigationPanel = document.querySelector('.navigation-panel');
+
+        const langBtnHeader = this.querySelector('.mobile-lang-switcher .lang-btn');
+        const langDropdownHeader = this.querySelector('.mobile-lang-switcher .lang-dropdown');
+
+        const langBtnPanel = this.querySelector('.navigation-panel .lang-btn');
+        const langDropdownPanel = this.querySelector('.navigation-panel .lang-dropdown');
+
+        const backdrop = document.querySelector('.backdrop');
+        const body = document.querySelector('body');
+
+
+        // Обработка клика по гамбургер-меню
+        menuIcon.addEventListener('click', () => {
+            navigationPanel.classList.toggle('open');
+            backdrop.classList.toggle('active');
+            body.classList.toggle('blur-background');
+        });
+
+        // Обработка клика по гамбургер-меню внутри панели для закрытия
+        this.querySelector('.navigation-panel .menu-icon img').addEventListener('click', function() {
+            navigationPanel.classList.remove('open');
+            backdrop.classList.remove('active'); 
+            body.classList.remove('blur-background');
+        });
+
+        // Закрытие панели при клике вне её
+        window.addEventListener('click', (event) => {
+            if (!navigationPanel.contains(event.target) && !menuIcon.contains(event.target)) {
+                navigationPanel.classList.remove('open');
+                backdrop.classList.remove('active');
+                body.classList.remove('blur-background');
+            }
+        });
+        
+        // Обработка клика по кнопке переключателя языка в хедере
+        langBtnHeader.addEventListener('click', () => {
+            langDropdownHeader.classList.toggle('show');
+        });
+
+        // Обработка клика по кнопке переключателя языка в навигационной панели
+        langBtnPanel.addEventListener('click', () => {
+            langDropdownPanel.classList.toggle('show');
+        });
+
+        // Закрываем меню языка при клике вне его (для хедера)
+        window.addEventListener('click', (e) => {
+            if (!langBtnHeader.contains(e.target) && !langDropdownHeader.contains(e.target)) {
+                langDropdownHeader.classList.remove('show');
+            }
+        });
+
+        // Закрываем меню языка при клике вне его (для навигационной панели)
+        window.addEventListener('click', (e) => {
+            if (!langBtnPanel.contains(e.target) && !langDropdownPanel.contains(e.target)) {
+                langDropdownPanel.classList.remove('show');
+            }
+        });
     }
 
     highlightActiveLink() {

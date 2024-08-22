@@ -27,18 +27,26 @@
         <special-header></special-header>
 
         <div class="cover-photo-container">
-            <img src="/images/mainpic.png" alt="Artwork Background" class="cover-photo">
+            <picture>
+                <source srcset="/images/mainpic2.png" media="(max-width: 768px)">
+                <img src="/images/mainpic.png" alt="Artwork Background" class="cover-photo">
+            </picture>
 
             <div class="bringing-visions">Bringing visions</div>
             <div class="mubarik">Mubarik</div>
             <div class="elmurzaeva">Elmurzaeva</div>
             <div class="to-life">to life</div>
+
+            <div class="bringing-visions-to-life">Bringing visions to life</div>
+
             <div class="go-to-portfolio">
                 <a href="/en/work" class="go-to-portfolio-link">(GO TO PORTFOLIO)</a>
             </div>
             <div class="go-to-portfolio-line"></div> 
         </div>
     </div>    
+
+    <div class="backdrop"></div>
     
     <script src="/js/headerFooter.js" defer></script> 
     <script src="/js/language-switcher.js" defer></script> 
