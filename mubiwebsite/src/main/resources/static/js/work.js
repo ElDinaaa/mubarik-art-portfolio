@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryContainer = document.querySelector('.gallery-container');
     const gallery = document.getElementById('gallery');
     let page = 1; // Номер текущей страницы
-    const itemsPerPage = 6; // Количество элементов на странице
+    const itemsPerPage = 6; // Количество элементов на странице 
     const heightIncrement = 1854; 
+
+    // Определяем, десктопная это версия или мобильная
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     // Определяем текущий язык на основе атрибута, установленного на странице
     const language = document.documentElement.lang || 'en'; // Например, 'en' или 'ru'
@@ -20,7 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         loadMoreBtn.addEventListener('click', () => {
             loadMoreContent(images, page);
             page++;
-            increaseGalleryContainerHeight();
+            if(!isMobile){             
+                increaseGalleryContainerHeight();    
+            } 
         });
 
         function loadMoreContent(images, page) {
@@ -39,10 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery.appendChild(newItem);
             });
 
-            // Перемещаем кнопку вниз после добавления новых элементов
-            const lastItem = gallery.querySelector(`.item-${startIndex + itemsPerPage}`);
-            const lastItemOffsetTop = lastItem.offsetTop + lastItem.offsetHeight;
-            loadMoreBtn.style.marginTop = `${lastItemOffsetTop + 20}px`;
+            // Если это десктопная версия, увеличиваем высоту контейнера
+            if (!isMobile) {
+                const lastItem = gallery.querySelector(`.item-${startIndex + itemsPerPage}`);
+                const lastItemOffsetTop = lastItem.offsetTop + lastItem.offsetHeight;
+                loadMoreBtn.style.marginTop = `${lastItemOffsetTop + 20}px`;
+            }
 
             // Если все изображения загружены, скрыть кнопку
             if (endIndex >= images.length) {
@@ -53,7 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         function increaseGalleryContainerHeight() {
             let currentHeight = galleryContainer.offsetHeight;
             let newHeight = currentHeight + heightIncrement;
-            galleryContainer.style.height = `${newHeight - 40}px`;
+            galleryContainer.style.height = `${newHeight}px`;
+        }
+        
+        if(isMobile){
+            // Перемещаем кнопку вниз после добавления новых элементов
+        const lastItem = gallery.querySelector(`.item-${startIndex + itemsPerPage}`);
+        const lastItemOffsetTop = lastItem.offsetTop + lastItem.offsetHeight;
+        loadMoreBtn.style.marginTop = `${lastItemOffsetTop + 20}px`;
         }
 
         // Устанавливаем начальную высоту для galleryContainer
