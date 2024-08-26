@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 gallery.appendChild(newItem);
             });
 
-            // Если это десктопная версия, увеличиваем высоту контейнера
+            // Перемещаем кнопку вниз после добавления новых элементов
             if (!isMobile) {
                 const lastItem = gallery.querySelector(`.item-${startIndex + itemsPerPage}`);
                 const lastItemOffsetTop = lastItem.offsetTop + lastItem.offsetHeight;
@@ -57,17 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        // Увеличиваем высоту контейнера галереи 
         function increaseGalleryContainerHeight() {
             let currentHeight = galleryContainer.offsetHeight;
             let newHeight = currentHeight + heightIncrement;
-            galleryContainer.style.height = `${newHeight}px`;
-        }
-        
-        if(isMobile){
-            // Перемещаем кнопку вниз после добавления новых элементов
-        const lastItem = gallery.querySelector(`.item-${startIndex + itemsPerPage}`);
-        const lastItemOffsetTop = lastItem.offsetTop + lastItem.offsetHeight;
-        loadMoreBtn.style.marginTop = `${lastItemOffsetTop + 20}px`;
+            galleryContainer.style.height = `${newHeight - 60}px`;
         }
 
         // Устанавливаем начальную высоту для galleryContainer
@@ -94,13 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="modal-material"></p> 
                     </div>
                     <div class="line-element"></div> <!-- Новая линия -->
-                        <div class="vertical-line-element"></div> <!-- Новая вертикальная линия -->
-                        <div class="new-rectangle">
+                    <div class="vertical-line-element"></div> <!-- Новая вертикальная линия -->
+                    <div class="new-rectangle">
                         <p class="second-description"></p> <!-- Второе описание картины -->
-                        <button class="order-now-btn">
+                        <!-- Кнопка для десктопной версии -->
+                        <button class="order-now-btn desktop-btn">
                             Order now
                         </button>
-                    </div> 
+                    </div>
+                    <!-- Кнопка для мобильной версии вне new-rectangle -->
+                    <button class="order-now-btn mobile-btn">
+                        Order now
+                    </button> 
                 </div>
             </div>`;
         document.body.appendChild(modal);
@@ -132,6 +131,30 @@ document.addEventListener('DOMContentLoaded', () => {
             modalMedium.textContent = imgElement.dataset.material;
             modalDescription.textContent = imgElement.dataset.description;
             modalSecondDescription.textContent = imgElement.dataset.secondDescription;
+
+                if(isMobile){
+                    // Обеспечиваем размещение текстового контейнера ниже изображения
+                    modalImg.onload = () => {
+                        const imgHeight = modalImg.offsetHeight;
+                        const textContainer = modal.querySelector('.text-container');
+                        textContainer.style.marginTop = `${imgHeight + 20}px`;
+
+                        // Располагаем .line-element на 20 пикселей ниже .text-container
+                        const lineElement = modal.querySelector('.line-element');
+                        lineElement.style.marginTop = `${textContainer.offsetTop + textContainer.offsetHeight + 20}px`;
+
+                        // Располагаем .new-rectangle на 20 пикселей ниже .line-element
+                        const newRectangle = modal.querySelector('.new-rectangle');
+                        newRectangle.style.marginTop = `${lineElement.offsetTop + lineElement.offsetHeight + 20}px`;
+
+                        const rectangleMaterial = modal.querySelector('.rectangle-material');
+                        rectangleMaterial.style.marginTop = `${newRectangle.offsetTop + newRectangle.offsetHeight+ 30}px`;
+
+                        const orderNowBtn = modal.querySelector('.order-now-btn.mobile-btn');
+                        orderNowBtn.style.marginTop = `${rectangleMaterial.offsetTop + rectangleMaterial.offsetHeight + 75}px`;
+                        
+                    };
+                }
             }
         });
 
@@ -144,9 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Обработчик для кнопки "ORDER NOW"
-        const orderNowBtn = modal.querySelector('.order-now-btn');
-        orderNowBtn.addEventListener('click', () => {
-            window.location.href = '/en/contact'; // Переход на страницу "CONTACT"
+        const orderNowBtns = modal.querySelectorAll('.order-now-btn.desktop-btn, .order-now-btn.mobile-btn');
+        orderNowBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                window.location.href = '/en/contact';
+            });
         });
     })
     .catch(error => {
