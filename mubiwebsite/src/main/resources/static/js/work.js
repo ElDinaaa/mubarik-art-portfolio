@@ -5,12 +5,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let page = 1; // Номер текущей страницы
     const itemsPerPage = 6; // Количество элементов на странице 
     const heightIncrement = 1854; 
+    let previousScrollPosition = 0; // Сохраняем положение прокрутки
 
     // Определяем, десктопная это версия или мобильная
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
     // Определяем текущий язык на основе атрибута, установленного на странице
     const language = document.documentElement.lang || 'en'; // Например, 'en' или 'ru'
+
+    // Проверяем, если текущий язык русский
+        if (language === 'ru') {
+        // Изменяем текст кнопки в зависимости от устройства
+            if (isMobile) {
+                loadMoreBtn.innerHTML = `
+                    <img src="/images/Star3.svg" alt="Star" class="icon-left">
+                    Смотреть ещё
+                    <img src="/images/Star3.svg" alt="Star" class="icon-right">
+                `;
+            } else {
+                loadMoreBtn.innerHTML = `
+                    <img src="/images/Star3.svg" alt="Star" class="icon-left">
+                    Eщё
+                    <img src="/images/Star3.svg" alt="Star" class="icon-right">
+                `;
+            }
+        }
 
     // Загружаем соответствующий JSON файл в зависимости от языка
     const jsonFile = language === 'ru' ? '/json/ru/images.json' : '/json/en/images.json';
@@ -117,6 +136,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const imgElement = e.target;
 
+                if(isMobile){
+                    // Сохраняем положение прокрутки перед открытием модального окна
+                    previousScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                    // Прокручиваем в начало страницы
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+
                 // Установка координат для модального окна
                 const rect = imgElement.getBoundingClientRect();
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -152,8 +178,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const orderNowBtn = modal.querySelector('.order-now-btn.mobile-btn');
                         orderNowBtn.style.marginTop = `${rectangleMaterial.offsetTop + rectangleMaterial.offsetHeight + 75}px`;
-                        
+                    
+                        // Устанавливаем высоту модального окна на 70 пикселей ниже кнопки
+                        const modalHeight = orderNowBtn.offsetTop + orderNowBtn.offsetHeight + 70;
+                        modal.style.height = `${modalHeight}px`;
                     };
+                }
+
+                // Изменяем текст кнопок в зависимости от языка
+                const desktopOrderNowBtn = document.querySelector('.order-now-btn.desktop-btn');
+                const mobileOrderNowBtn = document.querySelector('.order-now-btn.mobile-btn');
+
+                if (language === 'ru') {
+                    desktopOrderNowBtn.innerHTML = 'Заказать';
+                    mobileOrderNowBtn.innerHTML = 'Заказать';
+                } else {
+                    desktopOrderNowBtn.innerHTML = 'Order now';
+                    mobileOrderNowBtn.innerHTML = 'Order now';
                 }
             }
         });
@@ -163,6 +204,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (modal.style.display === 'flex' && !modal.querySelector('.modal-content').contains(e.target)) {
                 modal.style.display = 'none';
                 overlay.style.display = 'none'; 
+
+                if(isMobile){
+                    // Возвращаем пользователя к предыдущему положению прокрутки
+                    window.scrollTo({ top: previousScrollPosition, behavior:'smooth'});
+                }    
             }
         });
 
