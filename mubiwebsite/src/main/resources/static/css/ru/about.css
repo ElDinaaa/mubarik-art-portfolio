@@ -119,6 +119,77 @@ body {
     text-decoration: underline; 
 }
 
+.desktop-lang-switcher {
+    display: inline-block;
+}
+
+.mobile-lang-switcher {
+    display: none;
+}
+
+.lang-btn {
+    background-color: transparent;
+    border: none;
+    color: #FFF9F9;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.lang-btn:focus {
+    outline: none;
+}
+
+.lang-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #1B1818;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 20px;
+    right: 0;
+}
+
+.lang-dropdown a {
+    color: #FFF9F9;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.lang-dropdown.show {
+    display: block;
+}
+
+.desktop-lang-switcher .lang-icon {
+    display: none;
+}
+
+.lang-icon {
+    width: 7px;
+    height: 7px;
+    fill: #F5F5F5;
+    margin-left: 5px; 
+    position: absolute;
+    top: 9px; 
+    left: 23px;
+}
+
+.menu-icon img {
+    width: 30px;  
+    height: 20px; 
+    cursor: pointer;
+    position: absolute;
+    top: 36px;    
+    padding-right: 0;
+    right: 10px;
+}
+
+.menu-icon,
+.navigation-panel {
+    display: none;
+}
+
 .header-line {
     width: calc(100% - 40px);
     height: 1px;
@@ -151,6 +222,7 @@ body {
     object-fit: cover; 
 }
 
+/* Стили для заголовка */
 .title-container {
     position: absolute;
     left: 0;
@@ -231,7 +303,12 @@ body {
     text-align: center; 
 }
 
+.mobile-intro-text{
+    display: none;
+}
+
 .intro-text {
+    display: block;
     font-family: 'Hauora', sans-serif;
     font-size: 36px; 
     font-weight: 400; 
@@ -248,7 +325,12 @@ body {
     margin: 0;
 }
 
+.mobile-highlighted-text {
+    display: none;
+}
+
 .specialization-text {
+    display: block;
     position: relative;
     top: 0; 
     left: 0px; 
@@ -266,6 +348,7 @@ body {
 }
 
 .highlighted-text {
+    display: block;
     font-family: 'Miama Nueva', serif; 
     font-size: 40px; 
     font-weight: 400; 
@@ -276,7 +359,6 @@ body {
     display: inline-block; 
     text-transform: lowercase;
     letter-spacing: normal;
-    margin-left: 10px;
 }
 
 /* Стили для заголовка и описания секции выставок */
@@ -379,6 +461,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city1 {
@@ -445,6 +528,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city2 {
@@ -511,6 +595,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city3 {
@@ -675,6 +760,9 @@ body {
     background-color: transparent;
     padding: 20px 0; 
     margin-bottom: 20px;
+    bottom: 0;
+    padding-top: 90px;
+    position: relative;
 }
 
 .footer-line {
@@ -696,4 +784,539 @@ body {
 .social-icons a img {
     width: 21px;
     height: 21px;
+}
+
+@media (max-width: 768px) {
+    
+    /* Контейнер страницы */
+    .page-container {
+        width: 100%;
+    }
+
+    .header-container {
+        padding-top: 40px;
+        width: auto;
+    }
+
+    .logo {
+        margin-right: 0;
+        top: 0;
+        text-align: left;
+        width: 80px;
+        height: 28px;
+    }
+
+    .header-line{
+        background-color: transparent;
+        color: transparent;
+    }
+
+    /* Адаптация навигации */
+    .navigation{
+        display: none;
+    }
+
+    .blur-background::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(7.5px); 
+        background-color: rgba(0, 0, 0, 0.2); 
+        z-index: 999; 
+        transition: backdrop-filter 0.3s ease;
+    }
+
+    .navigation-panel {
+        display: none; 
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 55%;
+        height: 100%;
+        background-color: #1B1818;
+        z-index: 1001;
+        padding-top: 60px; 
+        overflow-y: auto;
+    }
+
+    .backdrop {
+        content: '';
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1000;
+    }
+
+    .navigation-panel.open ~ .backdrop {
+        display: block;
+    }
+
+    .navigation-panel.open {
+        display: block;
+        z-index: 1002;
+    }
+
+    .mobile-navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-navigation .language-switcher {
+        text-align: left;
+        position: absolute;
+        top: 36px;
+        left: 48%;
+    }
+
+    .mobile-navigation .lang-btn {
+        background-color: transparent;
+        border: none;
+        color: #FFF9F9;
+        font-size: 14px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    .mobile-navigation .lang-btn .lang-icon {
+        left: 18px;
+        width: 7px;
+        height: 7px;
+        fill: #FFF9F9;
+    }
+
+    .mobile-navigation .lang-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #1B1818;
+        min-width: 50px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1002;
+        right: 0;
+    }
+
+    .mobile-navigation .lang-dropdown a {
+        color: #FFF9F9;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .mobile-navigation .lang-dropdown.show {
+        display: block;
+    }
+
+    .mobile-navigation .menu-icon {
+        position: absolute;
+        top: 36px;
+        right: 0;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+    }
+
+    .mobile-navigation .menu-icon img {
+        width: 30px;
+        height: 20px;
+        top: 0;
+    }
+
+    .mobile-navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 100px 0 0 100px; 
+    }
+
+    .mobile-navigation ul li {
+        margin-bottom: 40px;
+        margin-right: 10px;
+    }
+
+    .mobile-navigation ul li a {
+        width: 123px;
+        height: 20px;
+        text-transform: uppercase;
+        color: #FFF9F9;
+        font-size: 20px;  
+        font-weight: 400; 
+        text-decoration: none; 
+        display: block;
+        text-align: right;  
+    }
+
+    .mobile-navigation .social-icons {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; 
+        position: absolute;
+        top: 859px; 
+        right: 10px;
+        gap: 10px;
+        z-index: 1002;
+    }
+
+    .mobile-navigation .social-icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .language-switcher {
+        font-family: 'Hauora', sans-serif;
+        width: 30px;
+        height: 16px;
+        top: 35px; 
+        left: 70%; 
+        font-size: 17px; 
+    }
+
+    .desktop-lang-switcher {
+        display: none;
+    }
+
+    .mobile-lang-switcher {
+        display: block;
+    }
+
+    .lang-icon {
+        display: inline-block;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Адаптация About*/
+
+    .about-header {
+        width: 95%;
+        top: 114px;
+        left: 10px;
+    }
+
+    .about-image {
+        left: calc(50% - 170px);
+        top: 0px;
+        width: 340px;
+        height: 405px;
+        border-radius: 0px 169.88px 0px 169.88px;
+    }
+
+    .title-container {
+        left: calc(50% - 170px);
+        top: 130px;
+    }
+
+    .title-a {
+        font-size: 100px; 
+        line-height: 100px; 
+        top: 0px; 
+        left: 0; 
+        width: 92px; 
+        height: 100px; 
+        z-index: 1;
+    }
+
+    .title-bout {
+        font-size: 56px; 
+        line-height: 56px; 
+        top: 11px; 
+        left: 98px; 
+        width: 105px; 
+        height: 100px;
+    }
+
+    .title-m {
+        font-size: 100px; 
+        line-height: 100px; 
+        top: 100px; 
+        left: 8px; 
+        width: 132px; 
+        height: 100px; 
+    }
+
+    .title-ubarik {
+        font-size: 56px; 
+        line-height: 56px; 
+        top: 111px; 
+        left: 131px; 
+        width: 209px; 
+        height: 56px; 
+    }
+
+    .about-content {
+        top: 569px; 
+        left: calc(50% - 160px); 
+        width: 340px; 
+        height: 234px; 
+    }
+
+    .intro-text {
+        display: none;
+    }
+
+    .mobile-intro-text {
+        display: block;
+        font-family: 'Hauora', sans-serif;
+        font-size: 24px; 
+        font-weight: 400;
+        line-height: 28.8px; 
+        letter-spacing: -0.02em;
+        color: #FFF9F9; 
+        position: relative;
+        top: 0; 
+        left: 0;
+        width: 340px; 
+        height: 174px;
+        text-align: center; 
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .specialization-text {
+        display: none;
+    }
+
+    .highlighted-text {
+        display: none;
+    }
+
+    .mobile-highlighted-text{
+        display: block;
+        position: relative;
+        top: 0px; 
+        left: 0px; 
+        width: 340px; 
+        height: auto; 
+        font-family: 'Miama Nueva', serif;
+        font-style: italic;
+        color: #C74B4B; 
+        font-size: 30px; 
+        font-weight: 400; 
+        line-height: 30px;
+        text-align: center; 
+        text-transform: lowercase;
+        margin: 0 auto;
+        letter-spacing: normal;
+    }
+
+    /* Адаптация секции выставок */
+
+    .exhibitions-container {
+        top: 924px; 
+        left: calc(50% - 170px); 
+        height: 1653px; 
+        width: 340px;
+    }
+
+    .exhibitions-header {
+        left: calc(50% - 76px);
+        width: 246px;
+        height: 98px;
+    }
+
+    .exhibitions-title {
+        left: 34px;
+    }
+
+    .exhibitions-description {
+        width: 246px; 
+        height: 48px; 
+    }
+
+    .exhibition-item1 {
+        top: 168px;
+        width: 340px;
+        height: 442px;
+        left: 0;
+    }
+
+    .exhibition-line1 {
+        top: 3px;
+        width: 230px;
+        margin-right: 40px;
+    }
+
+    .exhibition-image1 {
+        width: 340px;
+        height: 348px;
+    }
+
+    .exhibition-item2 {
+        top: 673px;
+        left: 0; 
+    }
+
+    .exhibition-line2 {
+        top: 3px;
+        width: 230px;
+        margin-right: 40px;
+    }
+
+    .exhibition-image2 {
+        width: 340px;
+        height: 348px;
+    }
+
+    .exhibition-item3 {
+        top: 1178px;
+        left: 0; 
+    }
+
+    .exhibition-line3 {
+        top: 3px;
+        width: 230px;
+        margin-right: 40px;
+    }
+
+    .exhibition-image3 {
+        width: 340px;
+        height: 348px;
+    }
+
+     /* Адаптация секции с наградами*/
+
+    .awards-section {
+        top: 2710px;
+        left: calc(50% - 170px); 
+        width: 340px;
+    } 
+
+    .awards-title {
+        left: calc(50% - 15px);
+        margin: 0;
+        text-align: left;
+        width: 185px;
+    }
+
+    .awards-container {
+        margin-top: 25px;
+    }
+
+    .award-item1 {
+        width: 160px;
+        height: 170px;
+        border-radius: 0px 80px 0px 80px;
+    }
+
+    .award-item2 {
+        width: 160px;
+        height: 170px;
+        border-radius: 80px 0px 80px 0px;
+    }
+
+    .award-item3 {
+        width: 160px;
+        height: 170px;
+        border-radius: 80px 0px 80px 0px;
+    }
+
+    .award-item4 {
+        width: 160px;
+        height: 170px;
+        border-radius: 0px 80px 0px 80px;
+    }
+
+    .award-text {
+        text-align: center;
+        letter-spacing: -0.02em;
+        margin: 0;
+        padding: 0 20px;
+        height: 64px;
+        width: 130px;
+    }
+
+    /* Адаптация философии*/
+
+    .philosophy-container {
+        top: 3285px;
+        left: calc(50% - 170px);
+    }
+
+    .philosophy-title {
+        left: 0;
+        margin-bottom: 30px;
+        margin-top: 0;
+        width: 340px;
+    }
+
+    .philosophy-content {
+        background-color: transparent; 
+        border-radius: none; 
+        width: 340px;
+        height: 609px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .philosophy-image {
+        position: absolute;
+        top: 166px;
+        width: 340px;
+        height: 233px;
+        border-radius: 194px 200px 200px 194px; 
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    .philosophy-text {
+        position: absolute;
+        text-align: left;
+        width: 340px;
+        height: 609px;
+        left: 0;
+        top: 0;
+    }
+
+    .philosophy-text p {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        margin-bottom: 20px;
+        height: 144px;
+    }
+
+    .philosophy-text p:last-child {
+        position: relative;
+        top: 273px;
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 192px;
+    }
+
+    /* Адаптация футера*/
+
+    .footer-container {
+        padding: 15px 0px; 
+        padding-top: 80px; 
+        text-align: center; 
+        top: 385px;
+    }
+
+    .footer-line {
+        margin: 0 auto 10px auto; 
+    }
+
+    .social-icons {
+        justify-content: right; 
+        gap: 15px; 
+        margin-top: 10px; 
+        margin-bottom: 15px;
+        right: 10px;
+    }
+
+    .social-icons a img {
+        width: 25px; 
+        height: 25px;
+    }
 }
