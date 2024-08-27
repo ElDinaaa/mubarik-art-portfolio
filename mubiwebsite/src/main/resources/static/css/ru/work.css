@@ -1361,6 +1361,7 @@ body {
        justify-content: right; 
        gap: 15px; 
        margin-top: 10px; 
+       right: 10px;
    }
 
    .social-icons a img {
