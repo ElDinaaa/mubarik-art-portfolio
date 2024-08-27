@@ -165,7 +165,6 @@ body {
     cursor: pointer;
     position: absolute;
     top: 36px;    
-    padding-right: 10px;
     right: 10px;
 }
 
@@ -349,7 +348,7 @@ h1, h2, h3, h4, h5, h6, p {
         position: fixed;
         top: 0;
         right: 0;
-        width: 200px;
+        width: 55%;
         height: 100%;
         background-color: #1B1818;
         z-index: 1001;
@@ -376,7 +375,6 @@ h1, h2, h3, h4, h5, h6, p {
     .navigation-panel.open {
         display: block;
         z-index: 1002;
-        margin-right: 10px;
     }
 
     .mobile-navigation {
@@ -388,8 +386,8 @@ h1, h2, h3, h4, h5, h6, p {
     .mobile-navigation .language-switcher {
         text-align: left;
         position: absolute;
-        top: 57px;
-        left: 100px;
+        top: 36px;
+        left: 48%;
     }
 
     .mobile-navigation .lang-btn {
@@ -433,8 +431,8 @@ h1, h2, h3, h4, h5, h6, p {
 
     .mobile-navigation .menu-icon {
         position: absolute;
-        top: 22px;
-        left: 180px;
+        top: 36px;
+        right: 0;
         cursor: pointer;
         width: 30px;
         height: 20px;
@@ -443,12 +441,14 @@ h1, h2, h3, h4, h5, h6, p {
     .mobile-navigation .menu-icon img {
         width: 30px;
         height: 20px;
+        top: 0;
+        padding: 0;
     }
 
     .mobile-navigation ul {
         list-style: none;
         padding: 0;
-        margin: 100px 0 0 85px; 
+        margin: 100px 0 0 120px; 
     }
 
     .mobile-navigation ul li {

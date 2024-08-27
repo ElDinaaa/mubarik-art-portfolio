@@ -812,7 +812,7 @@ body {
     .header-container {
         padding-top: 40px;
         width: auto;
-        z-index: 1000;
+        /* z-index: 1000; */
     }
 
     .logo {
@@ -851,7 +851,7 @@ body {
         position: fixed;
         top: 0;
         right: 0;
-        width: 200px;
+        width: 55%;
         height: 100%;
         background-color: #1B1818;
         z-index: 1001;
@@ -878,7 +878,6 @@ body {
     .navigation-panel.open {
         display: block;
         z-index: 1002;
-        margin-right: 10px;
     }
 
     .mobile-navigation {
@@ -890,8 +889,8 @@ body {
     .mobile-navigation .language-switcher {
         text-align: left;
         position: absolute;
-        top: 57px;
-        left: 100px;
+        top: 36px;
+        left: 48%;
     }
 
     .mobile-navigation .lang-btn {
@@ -935,8 +934,8 @@ body {
 
     .mobile-navigation .menu-icon {
         position: absolute;
-        top: 22px;
-        left: 180px;
+        top: 36px;
+        right: 0;
         cursor: pointer;
         width: 30px;
         height: 20px;
@@ -945,12 +944,13 @@ body {
     .mobile-navigation .menu-icon img {
         width: 30px;
         height: 20px;
+        top: 0;
     }
 
     .mobile-navigation ul {
         list-style: none;
         padding: 0;
-        margin: 100px 0 0 85px; 
+        margin: 100px 0 0 120px; 
     }
 
     .mobile-navigation ul li {
@@ -973,12 +973,11 @@ body {
     .mobile-navigation .social-icons {
         display: flex;
         justify-content: flex-end;
+        align-items: center; 
         position: absolute;
-        width: 160px;
-        bottom: 100px;
-        gap: 10px;
+        top: 859px; 
         right: 10px;
-        width: 160px;
+        gap: 10px;
         z-index: 1002;
     }
 
@@ -1090,8 +1089,6 @@ body {
     /* Адаптация галереи*/
 
     .gallery-container {
-        margin-left: 10px; 
-        margin-right: 10px; 
         margin-top: 90px;
         width: 100%;
         height: auto !important; 
@@ -1124,7 +1121,6 @@ body {
         width: 100%; 
         height: auto;
         padding: 25px 0; 
-        padding-right: 10px;
     }
 
     .gallery-item.item-1 img,
@@ -1157,6 +1153,7 @@ body {
     .gallery-item.item-23 {
         width: calc(50% - 10px);
         height: auto;
+        padding-bottom: 50px;
     }
 
     .gallery-item.item-2 img,
@@ -1344,7 +1341,7 @@ body {
     /* Адаптация футера*/
 
     .footer-container {
-        padding: 15px 10px; 
+        padding: 15px 0px; 
         padding-top: 0px; 
         text-align: center; 
     }
