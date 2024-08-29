@@ -322,187 +322,160 @@ body {
     height: 100%;
     object-fit: cover;
     cursor: pointer;
+    border-radius: inherit;
 }
 
 /* Стили для первых шести элементов */
-.item-1 {
+
+.item-1, .item-7, .item-13, .item-19, .item-25  {
     width: 670px;
     height: 460px;
-    top: 152px;
     left: 558px;
     border-radius: 0px 200px 0px 200px;
 }
 
-.item-2 {
+.item-2, .item-8, .item-14, .item-20, .item-26  {
     width: 325px;
     height: 400px;
-    top: 292px;
     left: 40px;
 }
 
-.item-3 {
+.item-3, .item-9, .item-15, .item-21, .item-27 {
     width: 498px;
     height: 323px;
-    top: 782px;
     left: 385px;
 }
 
-.item-4 {
+.item-4, .item-10, .item-16, .item-22, .item-28 {
     width: 325px;
     height: 400px;
-    top: 944px;
     left: 1075px;
     border-radius: 0px 0px 0px 150px;
 }
 
-.item-5 {
+.item-5, .item-11, .item-17, .item-23, .item-29 {
     width: 325px;
     height: 400px;
-    top: 1195px;
     left: 40px;
     border-radius: 0px 150px 0px 0px;
 }
 
-.item-6 {
+.item-6, .item-12, .item-18, .item-24, .item-30 {
     width: 325px;
     height: 400px;
-    top: 1395px;
     left: 558px;
+}
+
+.item-1 {
+    top: 152px;
+}
+
+.item-2 {
+    top: 292px;
+}
+
+.item-3 {
+    top: 782px;
+}
+
+.item-4 {
+    top: 944px;
+}
+
+.item-5 {
+    top: 1195px;
+}
+
+.item-6 {
+    top: 1395px;
 }
 
 /* Стили для следующих элементов */
 .item-7 {
-    width: 670px;
-    height: 460px;
     top: 1935px;
-    left: 558px;
-    border-radius: 0px 200px 0px 200px;
 }
 
 .item-8 {
-    width: 325px;
-    height: 400px;
     top: 2095px;
-    left: 40px;
 }
 
 .item-9 {
-    width: 498px;
-    height: 323px;
     top: 2585px;
-    left: 385px;
 }
 
 .item-10 {
-    width: 325px;
-    height: 400px;
     top: 2747px;
-    left: 1075px;
-    border-radius: 0px 0px 0px 150px;
 }
 
 .item-11 {
-    width: 325px;
-    height: 400px;
     top: 2998px;
-    left: 40px;
-    border-radius: 0px 150px 0px 0px;
 }
 
 .item-12 {
-    width: 325px;
-    height: 400px;
     top: 3198px;
-    left: 558px;
 }
 
 .item-13 {
-    width: 670px;
-    height: 460px;
     top: 3738px;
-    left: 558px;
-    border-radius: 0px 200px 0px 200px;
 }
 
 .item-14 {
-    width: 325px;
-    height: 400px;
     top: 3898px;
-    left: 40px;
 }
 .item-15 {
-    width: 498px;
-    height: 323px;
     top: 4388px;
-    left: 385px;
 }
 
 .item-16 {
-    width: 325px;
-    height: 400px;
     top: 4550px;
-    left: 1075px;
-    border-radius: 0px 0px 0px 150px;
 }
 
 .item-17 {
-    width: 325px;
-    height: 400px;
     top: 4801px;
-    left: 40px;
-    border-radius: 0px 150px 0px 0px;
 }
 
 .item-18 {
-    width: 325px;
-    height: 400px;
     top: 5001px;
-    left: 558px;
 }
 
 .item-19 {
-    width: 670px;
-    height: 460px;
     top: 5541px;
-    left: 558px;
-    border-radius: 0px 200px 0px 200px;
 }
 
 .item-20 {
-    width: 325px;
-    height: 400px;
     top: 5701px;
-    left: 40px;
 }
 
 .item-21 {
-    width: 498px;
-    height: 323px;
     top: 6191px;
-    left: 385px;
 }
 
 .item-22 {
-    width: 325px;
-    height: 400px;
     top: 6353px;
-    left: 1075px;
-    border-radius: 0px 0px 0px 150px;
 }
 
 .item-23 {
-    width: 325px;
-    height: 400px;
     top: 6604px;
-    left: 40px;
-    border-radius: 0px 150px 0px 0px;
 }
 
 .item-24 {
-    width: 325px;
-    height: 400px;
     top: 6804px;
-    left: 558px;
+}
+
+.item-25 {
+    top: 7344px;
+}
+
+.item-26 {
+    top: 7504px;
+}
+
+.item-27 {
+    top: 7994px;
+}
+
+.item-28 {
+    top: 8156px;
 }
 
 .image-title {
@@ -1110,6 +1083,7 @@ body {
         width: 100%;
         height: auto; 
         object-fit: cover; 
+        border-radius: 0;
     }
 
     .gallery-item.item-1,

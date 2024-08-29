@@ -117,5 +117,41 @@
         "material": "Чем написана",
         "description": "Описание картины",
         "secondDescription": "Второе описание картины"
+    },
+    {
+        "src": "image24.jpg",
+        "title": "«Название картины24»",
+        "material": "Чем написана",
+        "description": "Описание картины 24",
+        "secondDescription": "Второе описание картины"
+    },
+    {
+        "src": "image25.jpg",
+        "title": "«Название картины25»",
+        "material": "Чем написана",
+        "description": "Описание картины 25",
+        "secondDescription": "Второе описание картины"
+    },
+    {
+        "src": "image26.jpg",
+        "title": "«Название картины26»",
+        "material": "Чем написана",
+        "description": "Описание картины 26",
+        "secondDescription": "Второе описание картины"
+    },
+    {
+        "src": "image27.jpg",
+        "title": "«Название картины27»",
+        "material": "Чем написана",
+        "description": "Описание картины 27",
+        "secondDescription": "Второе описание картины"
+    },
+    {
+        "src": "image28.jpg",
+        "title": "«Название картины28»",
+        "material": "Чем написана",
+        "description": "Описание картины 28",
+        "secondDescription": "Второе описание картины"
     }
+
 ]

@@ -117,5 +117,40 @@
         "material": "Medium 23",
         "description": "Description of painting 23",
         "secondDescription": "Second description of painting 23"
+    },
+    {
+        "src": "image24.jpg",
+        "title": "Painting Title 24",
+        "material": "Medium 24",
+        "description": "Description of painting 24",
+        "secondDescription": "Second description of painting 24"
+    },
+    {
+        "src": "image25.jpg",
+        "title": "Painting Title 25",
+        "material": "Medium 25",
+        "description": "Description of painting 25",
+        "secondDescription": "Second description of painting 25"
+    },
+    {
+        "src": "image26.jpg",
+        "title": "Painting Title 26",
+        "material": "Medium 26",
+        "description": "Description of painting 26",
+        "secondDescription": "Second description of painting 26"
+    },
+    {
+        "src": "image27.jpg",
+        "title": "Painting Title 27",
+        "material": "Medium 27",
+        "description": "Description of painting 27",
+        "secondDescription": "Second description of painting 27"
+    },
+    {
+        "src": "image28.jpg",
+        "title": "Painting Title 28",
+        "material": "Medium 28",
+        "description": "Description of painting 28",
+        "secondDescription": "Second description of painting 28"
     }
 ]
