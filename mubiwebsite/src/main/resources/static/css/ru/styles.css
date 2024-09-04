@@ -129,19 +129,25 @@ body {
 .lang-dropdown {
     display: none;
     position: absolute;
-    background-color: #1B1818;
-    min-width: 50px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 20px;
-    right: 0;
+    width: 26px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 1.2);
+    z-index: 1002;
+    right: 1px;
+    height: 20px;
+    top: 22px;
+    background-color: #C74B4B;
 }
 
 .lang-dropdown a {
     color: #FFF9F9;
-    padding: 8px 16px;
     text-decoration: none;
     display: block;
+    text-align: center;
+    left: -1px;
+    position: relative;
+    margin: 0;
+    top: 0px;
+    font-size: 14px;
 }
 
 .lang-dropdown.show {
@@ -274,19 +280,30 @@ body {
     text-transform: uppercase; 
 }
 
+.go-to-portfolio::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px; 
+    height: 1px; 
+    background-color: #FFF9F9; 
+}
+
 .go-to-portfolio a {
     text-decoration: none; 
     color: #FFF9F9; 
     display: inline-block; 
 }
 
-.go-to-portfolio-line {
-    position: absolute;
-    top: 678px;
-    left: 1075px;
-    width: 244px;
-    height: 1px;
-    background: #FFF9F9;
+.go-to-portfolio:hover::after,
+.go-to-portfolio:active::after {
+    background-color: #C74B4B; 
+}
+
+.go-to-portfolio a:hover,
+.go-to-portfolio a:active {
+    color: #C74B4B; 
 }
 
 /* Общие стили для текста */
@@ -410,18 +427,25 @@ h1, h2, h3, h4, h5, h6, p {
     .mobile-navigation .lang-dropdown {
         display: none;
         position: absolute;
-        background-color: #1B1818;
-        min-width: 50px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        width: 26px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 1.2);
         z-index: 1002;
-        right: 0;
+        right: 7px;
+        height: 20px;
+        top: 22px;
+        background-color: #C74B4B;
     }
 
     .mobile-navigation .lang-dropdown a {
         color: #FFF9F9;
-        padding: 8px 16px;
         text-decoration: none;
         display: block;
+        text-align: center;
+        left: -1px;
+        position: relative;
+        margin: 0;
+        top: 0px;
+        font-size: 14px;
     }
 
     .mobile-navigation .lang-dropdown.show {
@@ -441,7 +465,7 @@ h1, h2, h3, h4, h5, h6, p {
         width: 30px;
         height: 20px;
         top: 0;
-        padding: 0;
+        /*padding: 0;*/
     }
 
     .mobile-navigation ul {
@@ -577,29 +601,11 @@ h1, h2, h3, h4, h5, h6, p {
     }
 
     .go-to-portfolio {
-        position: absolute;
         top: 620px;
         left: 37%;
-        width: 247px;
-        height: 20px;
-        font-size: 20px;
-        font-weight: 400;
-        text-decoration: none;
         line-height: 20px;
-        color: #FFF9F9;
-        font-style: normal;
-        text-transform: uppercase;
         text-align: center; 
         z-index: 2;
     }
 
-    .go-to-portfolio-line {
-        position: absolute;
-        top: 645px; 
-        left: 37%; 
-        width: 247px; 
-        height: 1px; 
-        background: #FFF9F9;
-        z-index: 1; 
-    }
 }

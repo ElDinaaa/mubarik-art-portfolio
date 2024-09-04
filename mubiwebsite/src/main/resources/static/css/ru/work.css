@@ -443,6 +443,16 @@ body {
     margin: 0 5px;
 }
 
+#view-more-btn:hover {
+    background-color: #C74B4B; /* Цвет фона при наведении */
+    color: #F5F5F5; /* Цвет текста при наведении */
+}
+
+#view-more-btn:active {
+    background-color: #8B3B3B; /* Цвет фона при нажатии */
+    color: #FFFFFF; /* Цвет текста при нажатии */
+}
+
 /* Стиль для затемнения */
 .modal-overlay {
     position: fixed;
