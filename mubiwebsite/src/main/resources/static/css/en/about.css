@@ -297,7 +297,7 @@ body {
 .about-content {
     position: absolute;
     top: 825px; 
-    left: 270px; 
+    left: 220px; 
     width: 1119px; 
     height: 136px; 
     text-align: center; 
@@ -317,8 +317,8 @@ body {
     color: #FFF9F9; 
     position: relative;
     top: 0; 
-    left: 0; 
-    width: 900px; 
+    left: calc(50% - 500px); 
+    width: 1000px; 
     height: 86px;
     text-align: center; 
     text-transform: uppercase;
@@ -334,7 +334,7 @@ body {
     position: relative;
     top: 0; 
     left: 55px; 
-    width: 90%; 
+    width: 100%; 
     height: auto; 
     font-family: 'Hauora', sans-serif;
     font-size: 36px; 
@@ -402,7 +402,7 @@ body {
     top: 10px; 
     left: 0; 
     margin: 0;
-    width: 230px; 
+    width: 240px; 
     height: 32px; 
     text-align: center;
 }
@@ -461,6 +461,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city1 {
@@ -527,6 +528,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city2 {
@@ -593,6 +595,7 @@ body {
     font-weight: 400;
     color: #FFF9F9;
     margin: 0;
+    text-transform: uppercase;
 }
 
 .exhibition-city3 {
@@ -687,7 +690,19 @@ body {
     text-align: center;
     letter-spacing: -0.02em;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 40px;
+}
+
+.award-text2 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-top: 30px;
+    padding: 0 40px;
 }
 
 .philosophy-container {
@@ -1220,6 +1235,12 @@ body {
         padding: 0 15px;
         height: 64px;
         width: 130px;
+    }
+
+    .award-text2 {
+        position: relative;
+        top: 10px;
+        padding: 0px 18px;
     }
 
     /* Адаптация философии*/

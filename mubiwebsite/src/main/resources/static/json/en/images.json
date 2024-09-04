@@ -1,156 +1,212 @@
 [
     {
         "src": "image7.jpg",
-        "title": "Painting Title 7",
-        "material": "Watercolor",
-        "description": "Description of painting 7",
-        "secondDescription": "Second description of painting 7"
+        "title": "«Rose»",
+        "material": "Canvas/ Oil",
+        "description": "This work, created with oil on canvas, depicts a rose in contrasting tones. The lines and shapes of the petals are emphasized with bold contour lines, giving the flower a graphic and expressive quality.",
+        "secondDescription": "The painting invites the viewer to see beauty in ease and spontaneity, in the imperfection that makes each piece unique."
     },
     {
         "src": "image8.jpg",
-        "title": "Painting Title 8",
-        "material": "Oil",
-        "description": "Description of painting 8",
-        "secondDescription": "Second description of painting 8"
+        "title": "«Golden Rose»",
+        "material": "Canvas/ Oil",
+        "description": "This work, painted in oil on canvas, depicts a flower with golden hues playing on its petals. The soft color transitions emphasize the texture of the rose, creating a sense of warmth and sophistication. The dark background enhances the contrast and highlights the luminous tones, adding drama to the image.",
+        "secondDescription": "The work conveys the harmony of nature, where even a solitary flower can shine like real gold."
     },
     {
         "src": "image9.jpg",
-        "title": "Painting Title 9",
-        "material": "Medium 9",
-        "description": "Description of painting 9",
-        "secondDescription": "Second description of painting 9"
+        "title": "«Blazing Poppy»",
+        "material": "Canvas/ Acrylic",
+        "description": "The painting depicts a solitary poppy blazing with fiery red and orange hues, creating the impression of a living flame amidst a calm, abstract background. The abstract background, painted with broad strokes in black and golden tones, highlights the boldness and vitality of the poppy, as if breaking free from the shadows into the light.",
+        "secondDescription": "This painting symbolizes inner strength and passion, the ability to shine brightly despite the surrounding darkness and chaos."
     },
     {
         "src": "image10.jpg",
-        "title": "Painting Title 10",
-        "material": "Medium 10",
-        "description": "Description of painting 10",
-        "secondDescription": "Second description of painting 10"
+        "title": "«Tree of Life»",
+        "material": "Canvas/Oil",
+        "description": "“Tree of Life” is an oil painting on canvas depicting a majestic tree, richly adorned with golden-yellow leaves that shine under the bright daylight. Soft brushstrokes convey the play of light and shadow on the trunk and branches, emphasizing volume and texture.",
+        "secondDescription": "This work conveys a sense of the strength and eternity of nature, its continuous cycle of life. The artist, through vivid colors and bright tones, emphasizes the untamed energy of nature and its capacity for renewal."
     },
     {
         "src": "image11.jpg",
-        "title": "Painting Title 11",
-        "material": "Medium 11",
-        "description": "Description of painting 11",
-        "secondDescription": "Second description of painting 11"
+        "title": "«Tulips»",
+        "material": "Canvas/Oil",
+        "description": "The painting depicts several tulips, with petals painted in rich shades of yellow, red, and green, standing out against a dark background.",
+        "secondDescription": "Bold brushstrokes and texture create a sense of movement and life, as if the tulips are dancing in a gust of wind. The painting invites the viewer to enjoy the beauty and vitality of nature, highlighting its uniqueness and strength."
     },
     {
         "src": "image12.jpg",
-        "title": "Painting Title 12",
-        "material": "Medium 12",
-        "description": "Description of painting 12",
-        "secondDescription": "Second description of painting 12"
+        "title": "«Pink Iris»",
+        "material": "Canvas/Acrylic, Paste",
+        "description": "The petals of the iris, painted in rich pink and crimson tones, contrast with the soft green background, creating a sense of freshness and lightness.",
+        "secondDescription": "The textured paste adds volume and depth, allowing the viewer to feel every fold and curve of the flower."
     },
     {
         "src": "image13.jpg",
-        "title": "Painting Title 13",
-        "material": "Medium 13",
-        "description": "Description of painting 13",
-        "secondDescription": "Second description of painting 13"
+        "title": "«Veil of Dew»",
+        "material": "Canvas/Oil, Gold Leaf",
+        "description": "“Veil of Dew” is a painting depicting a scarlet rose against a backdrop of a black and gold abstract pattern. The petals of the rose are covered with tiny dew drops, creating the impression that the flower is enveloped in a delicate watery veil.",
+        "secondDescription": "The drops glisten on the rich red petals, adding volume and depth, while the contrasting background enhances the drama and mystery of the composition, drawing the eye and inviting reflection on hidden meanings and emotions."
     },
     {
         "src": "image14.jpg",
-        "title": "Painting Title 14",
-        "material": "Medium 14",
-        "description": "Description of painting 14",
-        "secondDescription": "Second description of painting 14"
+        "title": "«Magnolia»",
+        "material": "Canvas/Oil",
+        "description": "The painting depicts a branch with blooming magnolias against a calm emerald background. The delicate pink and white petals, painted with thick brushstrokes, create a sense of freshness and lightness.",
+        "secondDescription": "The vivid contrast between the softness of the flowers and the richness of the background emphasizes their refined beauty, while the textured brushwork adds depth and expressiveness to the painting, drawing attention to every element of the composition."
     },
     {
         "src": "image15.jpg",
-        "title": "Painting Title 15",
+        "title": "«Alone with Oneself»",
         "material": "Medium 15",
         "description": "Description of painting 15",
         "secondDescription": "Second description of painting 15"
     },
     {
         "src": "image16.jpg",
-        "title": "Painting Title 16",
-        "material": "Medium 16",
-        "description": "Description of painting 16",
-        "secondDescription": "Second description of painting 16"
+        "title": "«Morning in the Mountains»",
+        "material": "Canvas/Oil",
+        "description": "The painting captures the moment when the rising sun begins to paint the sky in warm shades, contrasting with the cold blues and whites of the snow-covered slopes.",
+        "secondDescription": "The detailed depiction of rocks, snow, and sparse vegetation emphasizes the harsh yet captivating beauty of the mountain landscape, fully revealing itself to the viewer."
     },
     {
         "src": "image17.jpg",
-        "title": "Painting Title 17",
-        "material": "Medium 17",
-        "description": "Description of painting 17",
-        "secondDescription": "Second description of painting 17"
+        "title": "«Village at the Foot of the Mountains»",
+        "material": "Canvas/Oil",
+        "description": "Soft shades of blue and white create a sense of winter tranquility, while the small snow-covered houses add warmth and coziness. The shadows of the pines and mountain slopes give the work depth, emphasizing the grandeur of the surrounding nature.",
+        "secondDescription": "The painting conveys a sense of peace and harmony of life in a remote corner of the world, where humans and nature coexist in unity and serenity."
     },
     {
         "src": "image18.jpg",
-        "title": "Painting Title 18",
-        "material": "Medium 18",
-        "description": "Description of painting 18",
-        "secondDescription": "Second description of painting 18"
+        "title": "«Poppies in the Wind»",
+        "material": "Canvas/ Oil, Gold Leaf",
+        "description": "The painting is done in oil on canvas with the use of textured paste and gold leaf, depicting two poppies in vibrant scarlet and orange tones. Their petals, seemingly dancing in the wind, create a sense of movement and lightness.",
+        "secondDescription": "The golden accents on the petals add warmth and richness to the composition, while the contrasting, textured background highlights the dynamics and energy of these wildflowers."
     },
     {
         "src": "image19.jpg",
-        "title": "Painting Title 19",
-        "material": "Medium 19",
-        "description": "Description of painting 19",
-        "secondDescription": "Second description of painting 19"
+        "title": "«Peace of the Soul»",
+        "material": "Paper/ Watercolor",
+        "description": "“Peace of the Soul” is a watercolor artwork depicting a serene corner of nature with a sprawling tree in the foreground and green hills in the distance. The soft colors and light shades of watercolor create an atmosphere of tranquility and calm.",
+        "secondDescription": "In the background, the rooftops of houses peek through the lush greenery, adding a sense of coziness and protection. The artwork invites the viewer to pause and enjoy a moment of silence and harmony, immersing in the beauty of nature."
     },
     {
         "src": "image20.jpg",
-        "title": "Painting Title 20",
-        "material": "Medium 20",
-        "description": "Description of painting 20",
-        "secondDescription": "Second description of painting 20"
+        "title": "«Sleeping Rose»",
+        "material": "Paper/Oil",
+        "description": "The painting depicts a rose bud that has not yet opened its petals against a background of deep green and blue shades. The rich red and burgundy tones of the petals give the bud expressiveness and mystery, creating the impression that the flower is sleeping, awaiting its bloom.",
+        "secondDescription": "The careful rendering of light and shadow adds depth and drama, highlighting the contrast between the delicacy of the petals and the intensity of the background."
     },
     {
         "src": "image21.jpg",
-        "title": "Painting Title 21",
-        "material": "Medium 21",
-        "description": "Description of painting 21",
-        "secondDescription": "Second description of painting 21"
+        "title": "«A Moment of Wind»",
+        "material": "Canvas/Oil",
+        "description": "“A Moment of Wind” depicts dandelions whose seeds are about to be carried away by the wind. The warm shades of orange and gold in the background resemble a sunset, creating the atmosphere of a fading day.",
+        "secondDescription": "The contrast between light and dark tones adds depth to the work and emphasizes the fragility of nature captured in this brief moment."
     },
     {
         "src": "image22.jpg",
-        "title": "Painting Title 22",
-        "material": "Medium 22",
-        "description": "Description of painting 22",
-        "secondDescription": "Second description of painting 22"
+        "title": "«Golden Cheetah»",
+        "material": "Canvas/ Oil, Gold Leaf",
+        "description": "“Golden Cheetah” is a minimalist painting depicting the silhouette of a cheetah in golden strokes against a deep black background. The clean lines and spots create a graceful and dynamic image that combines the elegance and power of a wild animal.",
+        "secondDescription": "The contrast between gold and the black background emphasizes the cheetah's nobility and uniqueness, adding mystery and elegance to the artwork."
     },
     {
         "src": "image23.jpg",
-        "title": "Painting Title 23",
-        "material": "Medium 23",
-        "description": "Description of painting 23",
-        "secondDescription": "Second description of painting 23"
+        "title": "«Moonlit Path»",
+        "material": "Canvas/ Oil, Gold Leaf",
+        "description": "“Moonlit Path” is a painting created with oil and gold leaf, depicting a bright full moon illuminating the night sky. It hovers over a serene landscape, casting its light on the water's surface and creating a long, golden pathway.",
+        "secondDescription": "The warm golden accents of the gold leaf emphasize the shimmering moonlight on the water, adding depth and texture. The painting evokes a sense of calm and tranquility, immersing the viewer in the atmosphere of a quiet night, where only the moon lights the way in the darkness."
     },
     {
         "src": "image24.jpg",
-        "title": "Painting Title 24",
-        "material": "Medium 24",
-        "description": "Description of painting 24",
-        "secondDescription": "Second description of painting 24"
+        "title": "«Flower on Gold»",
+        "material": "Canvas/ Oil, Gold Leaf",
+        "description": "The painting depicts a bright purple flower against a golden canvas background. The petals, meticulously detailed, stand out against the rich golden glow, highlighting their delicacy and natural beauty.",
+        "secondDescription": "The textured treatment of the background creates an effect of luxury and warmth, drawing the viewer's eye to the center of the composition and creating a sense of harmony and elegance."
     },
     {
         "src": "image25.jpg",
-        "title": "Painting Title 25",
-        "material": "Medium 25",
-        "description": "Description of painting 25",
-        "secondDescription": "Second description of painting 25"
+        "title": "«Warmth of Petals»",
+        "material": "Canvas/Oil",
+        "description": "“Warmth of Petals” is a painting depicting a close-up of a rose, revealing its velvety petals against a backdrop of dark green foliage. The soft pink and peach hues blend into each other, creating a sense of softness and warmth, as if the rose is warmed by the first rays of the sun.",
+        "secondDescription": "The smooth lines and fine details give the work a sense of liveliness and coziness, allowing the viewer to feel the warmth of each petal and enjoy its delicacy."
     },
     {
         "src": "image26.jpg",
-        "title": "Painting Title 26",
-        "material": "Medium 26",
-        "description": "Description of painting 26",
-        "secondDescription": "Second description of painting 26"
+        "title": "«Yellow Bud»",
+        "material": "Oil",
+        "description": "“Yellow Bud” is a painting depicting an unopened rose bud in shades of gold and warm yellow. The textured brushstrokes and subtle color transitions convey the density and texture of the petals, creating a sense of naturalness and depth. The petals are dotted with delicate spots, adding vibrancy and realism to the image.",
+        "secondDescription": "Against a dark green and black background, the bud seems to glow from within, highlighting its uniqueness and beauty in the stage of awaiting full bloom."
     },
     {
         "src": "image27.jpg",
-        "title": "Painting Title 27",
-        "material": "Medium 27",
-        "description": "Description of painting 27",
-        "secondDescription": "Second description of painting 27"
+        "title": "«The First Encounter»",
+        "material": "Watercolor",
+        "description": "“The First Encounter” is a painting depicting a touching meeting between a puppy and a kitten. The dog looks at the small kitten with interest and tenderness, while the kitten, despite its size, bravely stands its ground, ready to defend itself.",
+        "secondDescription": "The contrast between the calm, caring posture of the dog and the alert yet determined demeanor of the kitten creates an atmosphere of genuine curiosity and budding friendship."
     },
     {
         "src": "image28.jpg",
-        "title": "Painting Title 28",
-        "material": "Medium 28",
-        "description": "Description of painting 28",
-        "secondDescription": "Second description of painting 28"
+        "title": "«Grandfather»",
+        "material": "Watercolor",
+        "description": "The portrait depicts the artist's grandfather against the background of an ancient Chechen tower, a symbol of the people's history and traditions. The grandfather's face reflects wisdom and strength of spirit, characteristics of people who have lived a rich life full of challenges.",
+        "secondDescription": "In the background, one can see the massive stone walls of the Chechen tower, conveying a sense of strength and centuries-old history. The stonework of the tower, rendered in warm brown and gray tones, creates a contrast with the softer features of the portrait."
+    },
+    {
+        "src": "image29.jpg",
+        "title": "Grandmother",
+        "material": "Watercolor",
+        "description": "The painting depicts the artist's grandmother against the backdrop of an ancient Chechen tower. Despite the harsh trials of life, the woman's face radiates calmness and gentleness. Her gaze is full of wisdom and strength accumulated over the years, yet it retains warmth and care.",
+        "secondDescription": "The painting conveys not only the image of a wise and resilient woman but also a touching memory of someone who was a light and support for her loved ones, who, despite life's hardships, remained a symbol of goodness and hope."
+    },
+    {
+        "src": "image30.jpg",
+        "title": "«Autumn Street»",
+        "material": "Watercolor",
+        "description": "The painting «Autumn Street» is created in watercolor technique and depicts a quiet corner of a small street on a sunny autumn day. Tall trees with bare branches and golden leaves, through which light filters, create an atmosphere of tranquility and ease.",
+        "secondDescription": "In the background, old houses and parked cars can be seen, adding a sense of life and familiar coziness to the painting. The artwork immerses the viewer in the atmosphere of a warm autumn day, reminding them of the beauty of simple moments in life."
+    },
+    {
+        "src": "image31.jpg",
+        "title": "«View from the Tower»",
+        "material": "Watercolor",
+        "description": "The painting 'View from the Tower' invites the viewer to look into the past through the window of an ancient Chechen tower. The window is framed by massive stones, whose texture and color palette create a sense of antiquity and impregnability.",
+        "secondDescription": "This work conveys a feeling of coziness and protection inside the tower, while also revealing the vastness of the open world beyond its walls, where every detail of nature fills the canvas with life and history."
+    },
+    {
+        "src": "image32.jpg",
+        "title": "«Alima»",
+        "material": "Watercolor",
+        "description": "The painting depicts the artist's niece in her early childhood, capturing a moment of innocence and curiosity typical of a young child. The girl's large, expressive eyes, open gaze, and gentle smile convey her purity and spontaneity.",
+        "secondDescription": "This work is one of the artist's first attempts in watercolor, where she successfully conveyed the vibrancy and emotion of the subject."
+    },
+    {
+        "src": "image33.jpg",
+        "title": "«Self-Portrait»",
+        "material": "Watercolor",
+        "description": "This piece, one of the artist's early works, is a self-portrait created in watercolor. The painting depicts a woman with an open, thoughtful gaze and a calm expression.",
+        "secondDescription": "The soft watercolor shades highlight the delicacy of her features and the texture of the fabric draped around her head and shoulders, creating an effect of light and shadow."
+    },
+    {
+        "src": "image34.jpg",
+        "title": "«Birch Silence»",
+        "material": "Oil",
+        "description": "The painting “Birch Silence” depicts an urban scene with a close-up of a birch trunk in the foreground. The intricately detailed bark of the tree, with its characteristic black-and-white textures, draws attention and contrasts with the more blurred background.",
+        "secondDescription": "The painting creates a sense of tranquility, conveying the silence and calmness hidden in the bustle of city life. Warm autumn tones in the background enhance the atmosphere of coziness and the season, where nature and the city coexist in harmony."
+    },
+    {
+        "src": "image35.jpg",
+        "title": "«Butterfly»",
+        "material": "Oil",
+        "description": "The painting depicts a close-up of a colorful butterfly with bright yellow, blue, and black wings against a vibrant green background. The details of the butterfly's wing pattern, with contrasting spots and lines, create a sense of dynamism and liveliness.",
+        "secondDescription": "The translucent lines and vivid shades convey the lightness and grace of the butterfly, highlighting its beauty and fragility amidst the rich green background, creating a feeling of light and warmth."
+    },
+    {
+        "src": "image36.jpg",
+        "title": "«The Red Tree»",
+        "material": "Oil",
+        "description": "“The red tree” is a painting depicting a majestic tree with bright red leaves that stands out against the landscape. Positioned at the center of the composition, this tree creates a contrast with the surrounding greenery, emphasizing its uniqueness and beauty.",
+        "secondDescription": "The painting seems to invite the viewer to enjoy a moment of tranquility and admiration for nature, where vivid elements stand out among softer and more neutral tones."
     }
 ]

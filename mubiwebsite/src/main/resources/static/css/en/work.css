@@ -333,40 +333,40 @@ body {
 
 /* Стили для первых шести элементов */
 
-.item-1, .item-7, .item-13, .item-19, .item-25  {
+.item-1, .item-7, .item-13, .item-19, .item-25, .item-31 {
     width: 670px;
     height: 460px;
     left: 558px;
     border-radius: 0px 200px 0px 200px;
 }
 
-.item-2, .item-8, .item-14, .item-20, .item-26  {
+.item-2, .item-8, .item-14, .item-20, .item-26, .item-32  {
     width: 325px;
     height: 400px;
     left: 40px;
 }
 
-.item-3, .item-9, .item-15, .item-21, .item-27 {
+.item-3, .item-9, .item-15, .item-21, .item-27, .item-33 {
     width: 498px;
     height: 323px;
     left: 385px;
 }
 
-.item-4, .item-10, .item-16, .item-22, .item-28 {
+.item-4, .item-10, .item-16, .item-22, .item-28, .item-34 {
     width: 325px;
     height: 400px;
     left: 1075px;
     border-radius: 0px 0px 0px 150px;
 }
 
-.item-5, .item-11, .item-17, .item-23, .item-29 {
+.item-5, .item-11, .item-17, .item-23, .item-29, .item-35 {
     width: 325px;
     height: 400px;
     left: 40px;
     border-radius: 0px 150px 0px 0px;
 }
 
-.item-6, .item-12, .item-18, .item-24, .item-30 {
+.item-6, .item-12, .item-18, .item-24, .item-30, .item-36  {
     width: 325px;
     height: 400px;
     left: 558px;
@@ -1016,7 +1016,8 @@ body {
     .gallery-item.item-7,
     .gallery-item.item-13,
     .gallery-item.item-16,
-    .gallery-item.item-21 {
+    .gallery-item.item-21,
+    .gallery-item.item-31 {
         width: 100%; 
         height: auto;
         padding: 25px 0; 
@@ -1027,7 +1028,8 @@ body {
     .gallery-item.item-7 img,
     .gallery-item.item-13 img,
     .gallery-item.item-16 img,
-    .gallery-item.item-21 img {
+    .gallery-item.item-21 img, 
+    .gallery-item.item-31 img {
         width: calc(100% - 10px);  
         height: auto; 
         object-fit: cover; 
@@ -1049,7 +1051,17 @@ body {
     .gallery-item.item-19,
     .gallery-item.item-20,
     .gallery-item.item-22,
-    .gallery-item.item-23 {
+    .gallery-item.item-23,
+    .gallery-item.item-24,
+    .gallery-item.item-25,
+    .gallery-item.item-26,
+    .gallery-item.item-27,
+    .gallery-item.item-28,
+    .gallery-item.item-29,
+    .gallery-item.item-30,
+    .gallery-item.item-32,
+    .gallery-item.item-33,
+    .gallery-item.item-34 {
         width: calc(50% - 10px);
         height: auto;
         padding-bottom: 50px;
@@ -1071,7 +1083,17 @@ body {
     .gallery-item.item-19 img,
     .gallery-item.item-20 img,
     .gallery-item.item-22 img,
-    .gallery-item.item-23 img{
+    .gallery-item.item-23 img,
+    .gallery-item.item-24 img,
+    .gallery-item.item-25 img,
+    .gallery-item.item-26 img,
+    .gallery-item.item-27 img,
+    .gallery-item.item-28 img,
+    .gallery-item.item-29 img,
+    .gallery-item.item-30 img,
+    .gallery-item.item-32 img,
+    .gallery-item.item-33 img,
+    .gallery-item.item-34 img {
         width: 100%; 
         height: auto; 
     }

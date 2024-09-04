@@ -690,7 +690,19 @@ body {
     text-align: center;
     letter-spacing: -0.02em;
     margin: 0;
-    padding: 0 20px;
+    padding: 0 40px;
+}
+
+.award-text2 {
+    font-family: 'Hauora', sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-top: 30px;
+    padding: 0 40px;
 }
 
 .philosophy-container {
@@ -743,7 +755,7 @@ body {
 }
 
 .philosophy-text p {
-    margin-top: 42px;
+    margin-top: 0px;
     margin-bottom: 40px;
     height: 120px;
 }
@@ -1230,9 +1242,15 @@ body {
         text-align: center;
         letter-spacing: -0.02em;
         margin: 0;
-        padding: 0 20px;
+        padding: 0 30px;
         height: 64px;
         width: 130px;
+    }
+
+    .award-text2 {
+        position: relative;
+        top: 0px;
+        padding: 0px 18px;
     }
 
     /* Адаптация философии*/
@@ -1260,7 +1278,7 @@ body {
 
     .philosophy-image {
         position: absolute;
-        top: 166px;
+        top: 146px;
         width: 340px;
         height: 233px;
         border-radius: 194px 200px 200px 194px; 
@@ -1288,7 +1306,7 @@ body {
 
     .philosophy-text p:last-child {
         position: relative;
-        top: 273px;
+        top: 253px;
         margin-top: 0;
         margin-bottom: 0;
         height: 192px;

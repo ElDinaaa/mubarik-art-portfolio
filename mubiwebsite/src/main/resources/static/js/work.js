@@ -58,8 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 newItem.className = `gallery-item item-${itemIndex}`;
 
                 // Вычисление значения `top` на основе требования
-                const topValue = calculateTopValue(itemIndex);
-                newItem.style.top = `${topValue}px`; // Устанавливаем значение `top`
+                if(!isMobile){
+                    const topValue = calculateTopValue(itemIndex);
+                    newItem.style.top = `${topValue}px`; // Устанавливаем значение `top`
+                }
 
                 newItem.innerHTML = `
                     <img src="/images/${image.src}" alt="${image.title}" data-description="${image.description}" data-second-description="${image.secondDescription}" data-title="${image.title}" data-material="${image.material}">
@@ -233,7 +235,6 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateTopValue(itemIndex) {
         const initialTops = [152, 292, 782, 944, 1195, 1395]; // Исходные топы для первых 6 элементов
         const groupDifference = 1803; // Разница `top` между элементами из разных групп
-        const firstItemOffset = -20; // Смещение для первого элемента группы
         const groupSize = initialTops.length; // Количество элементов в одной группе
 
         const groupIndex = Math.floor((itemIndex - 1) / groupSize); // Индекс группы, к которой принадлежит 
@@ -243,7 +244,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return initialTops[indexWithinGroup]; // Возвращаем исходный топ
         } else {
             const previousGroupTop = calculateTopValue(itemIndex - groupSize); // Рекурсивно вычисляем `top` для соответствующего элемента в предыдущей группе
-            return previousGroupTop + groupDifference + (indexWithinGroup === 0 ? firstItemOffset : 0); // Вычисляем `top` с учетом разницы между группами и смещения для первого элемента группы
+            return previousGroupTop + groupDifference; // Вычисляем `top` с учетом разницы между группами 
         }
     }
 });
