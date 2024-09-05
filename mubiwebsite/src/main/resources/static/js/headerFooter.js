@@ -338,10 +338,10 @@ class SpecialFooter extends HTMLElement {
                 <a href="https://www.facebook.com/yourpage" target="_blank">
                     <img src="/images/facebook.svg" alt="Facebook">
                 </a>
-                <a href="https://www.instagram.com/yourpage" target="_blank">
+                <a href="" target="_blank">
                     <img src="/images/instagram.svg" alt="Instagram">
                 </a>
-                <a href="https://www.whatsapp.com/yourpage" target="_blank">
+                <a href="https://api.whatsapp.com/send?phone=79289087265" target="_blank">
                     <img src="/images/whatsapp.svg" alt="Twitter">
                 </a>
             </div>

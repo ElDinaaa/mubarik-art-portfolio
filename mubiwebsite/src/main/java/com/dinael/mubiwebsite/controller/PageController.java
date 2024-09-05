@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class PageController {
+
+    @GetMapping("/")
+    public String index(){
+        return "/ru/index";
+    }
     
    @GetMapping("/{lang}/index")
     public String index(@PathVariable String lang){
