@@ -471,12 +471,17 @@ h1, h2, h3, h4, h5, h6, p {
     .mobile-navigation ul {
         list-style: none;
         padding: 0;
-        margin: 100px 0 0 100px;  
+        position: relative;
+        left: calc(100% - 133px);
+        top: 80px;
+        margin: 0;
+        width: 123px; 
     }
 
     .mobile-navigation ul li {
         margin-bottom: 40px;
-        margin-right: 10px;
+        width: 123px;
+        position: relative;
     }
 
     .mobile-navigation ul li a {
@@ -494,13 +499,13 @@ h1, h2, h3, h4, h5, h6, p {
     .mobile-navigation .social-icons {
         display: flex;
         justify-content: flex-end;
+        align-items: center; 
         position: absolute;
-        width: 160px;
-        bottom: 100px;
-        gap: 10px;
+        top: 85%;
         right: 10px;
-        width: 160px;
+        gap: 10px;
         z-index: 1002;
+        margin: 0;
     }
 
     .mobile-navigation .social-icons img {
@@ -602,7 +607,7 @@ h1, h2, h3, h4, h5, h6, p {
 
     .go-to-portfolio {
         top: 620px;
-        left: 37%;
+        left: calc(100% - 257px);
         line-height: 20px;
         text-align: center; 
         z-index: 2;

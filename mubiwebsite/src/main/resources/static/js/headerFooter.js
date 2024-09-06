@@ -35,7 +35,7 @@ class SpecialHeader extends HTMLElement {
              <ul>
                  <li><a href="/en/work">Portfolio</a></li>
                  <li><a href="/en/about">About me</a></li>
-                 <li><a href="/en/contact">Contact</a></li>
+                 <li><a href="/en/contact">Contacts</a></li>
              </ul>
          </nav>
 
@@ -59,7 +59,7 @@ class SpecialHeader extends HTMLElement {
                 <ul>
                     <li><a href="/en/work">Portfolio</a></li>
                     <li><a href="/en/about">About me</a></li>
-                    <li><a href="/en/contact">Contact</a></li>
+                    <li><a href="/en/contact">Contacts</a></li>
                 </ul>
                 <div class="social-icons">
                     <a href="#"><img src="/images/facebook.svg" alt="Facebook"></a>
@@ -68,25 +68,25 @@ class SpecialHeader extends HTMLElement {
                 </div>
             </nav>
         </div>`;
-        this.updateLanguageLinks();
+        // this.updateLanguageLinks();
         this.addEventListeners();
         this.highlightActiveLink();
     }
 
-    updateLanguageLinks() {
-        const langEnLinks = this.querySelectorAll('#lang-en, #lang-en-mobile');
-        const langRuLinks = this.querySelectorAll('#lang-ru, #lang-ru-mobile, #lang-ru-panel');
+    // updateLanguageLinks() {
+    //     const langEnLinks = this.querySelectorAll('#lang-en, #lang-en-mobile');
+    //     const langRuLinks = this.querySelectorAll('#lang-ru, #lang-ru-mobile, #lang-ru-panel');
 
-        const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
         
-        langEnLinks.forEach(link => {
-            link.href = currentPath.replace('/ru/', '/en/');
-        });
+    //     langEnLinks.forEach(link => {
+    //         link.href = currentPath.replace('/ru/', '/en/');
+    //     });
 
-        langRuLinks.forEach(link => {
-            link.href = currentPath.replace('/en/', '/ru/');
-        });
-    }
+    //     langRuLinks.forEach(link => {
+    //         link.href = currentPath.replace('/en/', '/ru/');
+    //     });
+    // }
 
     addEventListeners() {
         const menuIcon = document.querySelector('.menu-icon img');
@@ -234,25 +234,25 @@ class SpecialHeaderRU extends HTMLElement {
                 </div>
             </nav>
         </div>`;
-        this.updateLanguageLinks();
+        // this.updateLanguageLinks();
         this.addEventListeners();
         this.highlightActiveLink();
     }
 
-    updateLanguageLinks() {
-        const langEnLinks = this.querySelectorAll('#lang-en, #lang-en-mobile, #lang-en-panel');
-        const langRuLinks = this.querySelectorAll('#lang-ru, #lang-ru-mobile');
+    // updateLanguageLinks() {
+    //     const langEnLinks = this.querySelectorAll('#lang-en, #lang-en-mobile, #lang-en-panel');
+    //     const langRuLinks = this.querySelectorAll('#lang-ru, #lang-ru-mobile');
 
-        const currentPath = window.location.pathname;
+    //     const currentPath = window.location.pathname;
         
-        langEnLinks.forEach(link => {
-            link.href = currentPath.replace('/ru/', '/en/');
-        });
+    //     langEnLinks.forEach(link => {
+    //         link.href = currentPath.replace('/ru/', '/en/');
+    //     });
 
-        langRuLinks.forEach(link => {
-            link.href = currentPath.replace('/en/', '/ru/');
-        });
-    }
+    //     langRuLinks.forEach(link => {
+    //         link.href = currentPath.replace('/en/', '/ru/');
+    //     });
+    // }
 
     addEventListeners() {
         const menuIcon = document.querySelector('.menu-icon img');

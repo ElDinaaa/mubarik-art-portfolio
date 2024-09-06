@@ -608,12 +608,17 @@ textarea:-webkit-autofill:focus {
     .mobile-navigation ul {
         list-style: none;
         padding: 0;
-        margin: 100px 0 0 120px; 
+        position: relative;
+        left: calc(100% - 115px);
+        top: 80px;
+        margin: 0;
+        width: 105px;
     }
 
     .mobile-navigation ul li {
         margin-bottom: 40px;
-        margin-right: 10px;
+        width: 105px;
+        position: relative;
     }
 
     .mobile-navigation ul li a {
@@ -633,10 +638,11 @@ textarea:-webkit-autofill:focus {
         justify-content: flex-end;
         align-items: center; 
         position: absolute;
-        top: 859px; 
+        top: 85%; 
         right: 10px;
         gap: 10px;
         z-index: 1002;
+        margin: 0;
     }
 
     .mobile-navigation .social-icons img {

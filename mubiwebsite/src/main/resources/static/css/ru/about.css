@@ -959,12 +959,17 @@ body {
     .mobile-navigation ul {
         list-style: none;
         padding: 0;
-        margin: 100px 0 0 100px; 
+        position: relative;
+        left: calc(100% - 133px);
+        top: 80px;
+        margin: 0;
+        width: 123px;
     }
 
     .mobile-navigation ul li {
         margin-bottom: 40px;
-        margin-right: 10px;
+        width: 123px;
+        position: relative;
     }
 
     .mobile-navigation ul li a {
@@ -984,10 +989,11 @@ body {
         justify-content: flex-end;
         align-items: center; 
         position: absolute;
-        top: 859px; 
+        top: 85%;
         right: 10px;
         gap: 10px;
         z-index: 1002;
+        margin: 0;
     }
 
     .mobile-navigation .social-icons img {

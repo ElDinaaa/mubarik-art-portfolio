@@ -1,19 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const langEn = document.getElementById('lang-en');
-    const langRu = document.getElementById('lang-ru');
+    const langEnLinks = document.querySelectorAll('#lang-en, #lang-en-mobile');
+    const langRuLinks = document.querySelectorAll('#lang-ru, #lang-ru-mobile, #lang-ru-panel');
 
-    langEn.addEventListener('click', (e) => {
-        e.preventDefault(); // Предотвращает переход по ссылке
-        changeLanguage('en');
+     // Добавляем обработчики событий для всех элементов с переключением языка на английский
+    langEnLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Предотвращает переход по ссылке
+            changeLanguage('en');
+        });
     });
 
-    langRu.addEventListener('click', (e) => {
-        e.preventDefault(); // Предотвращает переход по ссылке
-        changeLanguage('ru');
+    // Добавляем обработчики событий для всех элементов с переключением языка на русский
+    langRuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault(); // Предотвращает переход по ссылке
+            changeLanguage('ru');
+        });
     });
 
     function changeLanguage(lang) {
         let currentUrl = window.location.href;
+        let pathname = window.location.pathname;
+
+        if (pathname === "/") {  // Если на главной странице
+            window.location.href = `/${lang}/index`;
+            return;
+        }
+
         if (lang === 'en') {
             if (currentUrl.includes('/ru/')) {
                 window.location.href = currentUrl.replace('/ru/', '/en/');
