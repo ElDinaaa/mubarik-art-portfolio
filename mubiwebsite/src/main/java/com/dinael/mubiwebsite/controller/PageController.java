@@ -9,7 +9,7 @@ public class PageController {
 
     @GetMapping("/")
     public String index(){
-        return "/ru/index";
+        return "ru/index";
     }
     
    @GetMapping("/{lang}/index")

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let previousScrollPosition = 0; // Сохраняем положение прокрутки
 
     // Определяем, десктопная это версия или мобильная
-    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const isMobile = window.matchMedia("(max-width: 467px)").matches;
 
     // Определяем текущий язык на основе атрибута, установленного на странице
     const language = document.documentElement.lang || 'en'; // Например, 'en' или 'ru'

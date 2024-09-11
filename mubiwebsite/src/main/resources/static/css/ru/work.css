@@ -100,7 +100,7 @@ body {
     color: #C74B4B;
     line-height: 200px;
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
 }
 
@@ -270,13 +270,13 @@ body {
 }
 
 #view-more-btn:hover {
-    background-color: #C74B4B; /* Цвет фона при наведении */
-    color: #F5F5F5; /* Цвет текста при наведении */
+    background-color: #C74B4B;
+    color: #F5F5F5; 
 }
 
 #view-more-btn:active {
-    background-color: #8B3B3B; /* Цвет фона при нажатии */
-    color: #FFFFFF; /* Цвет текста при нажатии */
+    background-color: #8B3B3B; 
+    color: #FFFFFF; 
 }
 
 /* Стиль для затемнения */
@@ -295,9 +295,9 @@ body {
 .modal {
     display: none; 
     position: absolute; 
-    left: 193px; 
+    left: calc(50% - 522.5px);
     width: 1055px; 
-    height: 849px; 
+    height: 780px; 
     background-color: #1E2629; 
     border: 1px solid #C74B4B; 
     z-index: 1000;  
@@ -334,7 +334,7 @@ body {
 
 .modal-content img {
     max-width: 690px;  
-    max-height: 439px; 
+    max-height: 419px; 
     width: auto; 
     height: auto;  
     object-fit: contain; 
@@ -348,7 +348,7 @@ body {
 
 .modal-content .text-container {
     position: absolute; 
-    top: 105px;  
+    top: 85px;  
     left: 710px;  
     width: 325px; 
     height: auto;  
@@ -382,7 +382,7 @@ body {
 
 .rectangle-material {
     position: absolute;
-    top: 438px;  
+    top: 418px;  
     left: 689px;  
     width: 364px;  
     height: 79px;  
@@ -411,7 +411,7 @@ body {
 
 .line-element {
     position: absolute;
-    top: 438px; 
+    top: 418px; 
     left: 0; 
     width: 1055px;
     height: 0;
@@ -420,20 +420,20 @@ body {
 
 .vertical-line-element {
     position: absolute;
-    top: 438px;  
+    top: 418px;  
     left: 689px;  
     width: 1px; 
-    height: 411px;  
+    height: 362px;  
     background-color: #C74B4B;  
     border-left: 1px solid #C74B4B; 
 }
 
 .new-rectangle {
     position: absolute;
-    top: 518px;  
+    top: 498px;  
     left: 0px;  
     width: 1053px;  
-    height: 329px;  
+    height: 280px;  
     border: 1px solid #C74B4B; 
     background-color: transparent; 
 }
@@ -457,9 +457,9 @@ body {
     margin: 0; 
 }
 
-.order-now-btn {
+.order-now-btn.desktop-btn {
     position: absolute;
-    top: 144px; 
+    top: 112px; 
     left: 710px;  
     width: 325px;  
     height: 50px;  
@@ -529,7 +529,7 @@ body {
     height: 21px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 467px) {
     /* Контейнер страницы */
     .page-container {
        width: 100%;

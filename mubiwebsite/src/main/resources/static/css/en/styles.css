@@ -24,10 +24,11 @@ body {
 /* Стили для контейнера всей страницы */
 .page-container {
     width: 1440px;
-    height: 800px;
+    height: auto;
     margin: 0 auto;
     background-color: #1B1818;
-    position: relative; 
+    /* position: relative;  */
+    box-sizing: border-box;
 }
 
 /* Стили для cover-photo-container */
@@ -41,13 +42,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -2.25rem;
 }
 
 .cover-photo {
     position: absolute;
     top: 10px; 
     left: 226px;
-    width: 872px;
+    max-width: 872px;
     height: 853px;
     z-index: 1;
 }
@@ -156,11 +158,17 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 467px) {
     /* Контейнер страницы */
     .page-container {
-        width: 100%;
+        width: 100vw;
         height: auto;
+    }
+
+    .cover-photo-container {
+        position: relative;
+        z-index: 1;
+        margin-top: -1rem;
     }
 
     /* Стили для контейнера с фото */
@@ -177,8 +185,8 @@ h1, h2, h3, h4, h5, h6, p {
 
     .mubarik {
         position: absolute;
-        top: 318px; 
-        left: calc(50% - 91px);
+        top: 290px; 
+        left: calc(50% - 98px);
         width: 196px; 
         height: 56px; 
         font-size: 56px;
@@ -191,7 +199,7 @@ h1, h2, h3, h4, h5, h6, p {
 
     .elmurzaeva {
         position: absolute;
-        top: 384px; 
+        top: 356px; 
         left: calc(50% - 140px); 
         font-size: 56px;
         font-weight: 400;
@@ -228,7 +236,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
 
     .go-to-portfolio {
-        top: 620px;
+        top: 560px;
         left: 50%;
         line-height: 20px;
         color: #FFF9F9;

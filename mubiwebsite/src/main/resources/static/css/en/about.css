@@ -34,7 +34,7 @@ body {
     position: absolute;
     width: 1086px;
     top: 167px;
-    left: 270px;
+    left: calc(50% - 543px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +44,7 @@ body {
 
 .about-image {
     position: absolute;
-    left: 230px;
+    left: calc(50% - 220px);
     top: 9px;
     width: 440px;
     height: 526px;
@@ -57,7 +57,7 @@ body {
 /* Стили для заголовка */
 .title-container {
     position: absolute;
-    left: 0;
+    left: 90px;
     top: 87px;
     transform: translateX(-50%);
     color: #FFF9F9;
@@ -129,7 +129,7 @@ body {
 .about-content {
     position: absolute;
     top: 825px; 
-    left: 220px; 
+    left: calc(50% - 560px);
     width: 1119px; 
     height: 136px; 
     text-align: center; 
@@ -197,7 +197,7 @@ body {
 .exhibitions-container {
     position: absolute;
     top: 1114px; 
-    left: 40px; 
+    left: calc(50% - 700px);
     height: auto; 
 }
 
@@ -444,7 +444,7 @@ body {
     text-align: center;
     position: absolute;
     top: 2526px;
-    left: 270px; 
+    left: calc(50% - 450px); 
 }
 
 .awards-title {
@@ -540,7 +540,7 @@ body {
 .philosophy-container {
     position: absolute;
     top: 3091px;
-    left: 40px;
+    left: calc(50% - 680px);
     text-align: left;
 }
 
@@ -630,7 +630,7 @@ body {
     height: 21px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 467px){
      /* Контейнер страницы */
      .page-container {
         width: 100%;
