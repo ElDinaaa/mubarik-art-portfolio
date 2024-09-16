@@ -630,8 +630,8 @@ body {
     height: 21px;
 }
 
-@media (max-width: 467px) {
-    
+@media (max-width: 576px) and (orientation: portrait)  {
+
     /* Контейнер страницы */
     .page-container {
         width: 100%;
@@ -640,66 +640,74 @@ body {
     /* Адаптация About*/
 
     .about-header {
-        width: 95%;
-        top: 114px;
-        left: 10px;
+        position: relative; 
+        width: 100%;
+        top: 4.5rem;
+        left: 0; 
+        margin: 0 auto; 
+        max-height: 25.3rem;
     }
 
     .about-image {
-        left: calc(50% - 170px);
+        position: relative; 
+        left: 0;
         top: 0px;
-        width: 340px;
-        height: 405px;
-        border-radius: 0px 169.88px 0px 169.88px;
+        width: 95%; 
+        max-width: 340px; 
+        height: 25.3rem; 
+        border-radius: 0px 170px 0px 170px; 
     }
 
     .title-container {
-        left: calc(50% - 170px);
-        top: 130px;
+        position: relative; 
+        width: 100%; 
+        max-width: 340px; 
+        left: calc(50% - 4rem);
+        transform: translateX(-50%);
+        top: -19rem;
     }
 
     .title-a {
-        font-size: 100px; 
-        line-height: 100px; 
-        top: 0px; 
-        left: 0; 
-        width: 92px; 
-        height: 100px; 
+        font-size: 6.25rem; 
+        line-height: 6.25rem; 
+        top: 0; 
+        left: -1.8rem; 
         z-index: 1;
+        position: relative; 
     }
 
     .title-bout {
-        font-size: 56px; 
-        line-height: 56px; 
-        top: 11px; 
-        left: 98px; 
-        width: 105px; 
-        height: 100px;
+        font-size: 3.5rem; 
+        line-height: 3.5rem; 
+        top: 0; 
+        left: -3rem; 
+        position: relative; 
     }
 
-    .title-m {
-        font-size: 100px; 
-        line-height: 100px; 
-        top: 100px; 
-        left: 8px; 
-        width: 132px; 
-        height: 100px; 
+    .title-m { 
+        font-size: 6.25rem; 
+        line-height: 6.25rem; 
+        top: 0rem; 
+        left: -4.5rem; 
+        position: relative;
     }
 
     .title-ubarik {
-        font-size: 56px; 
-        line-height: 56px; 
-        top: 111px; 
-        left: 131px; 
-        width: 209px; 
-        height: 56px; 
+        font-size: 3.5rem; 
+        line-height: 3.5rem; 
+        top: -5.8rem; 
+        left: 5.9rem; 
+        position: relative;
     }
 
     .about-content {
-        top: 569px; 
-        left: calc(50% - 160px); 
-        width: 340px; 
-        height: 234px; 
+        position: relative;
+        top: -2%; 
+        left: 0; 
+        width: 100%; 
+        max-width: 340px; 
+        height: auto;
+        margin: 0 auto;
     }
 
     .intro-text {
@@ -709,19 +717,19 @@ body {
     .mobile-intro-text {
         display: block;
         font-family: 'Hauora', sans-serif;
-        font-size: 24px; 
+        font-size: 1.5rem; 
         font-weight: 400;
-        line-height: 28.8px; 
+        line-height: 1.8rem; 
         letter-spacing: -0.02em;
         color: #FFF9F9; 
         position: relative;
         top: 0; 
         left: 0;
-        width: 340px; 
-        height: 174px;
+        width: 100%;
+        height: auto;
         text-align: center; 
         text-transform: uppercase;
-        margin: 0;
+        margin: 0 auto;
     }
 
     .specialization-text {
@@ -735,16 +743,16 @@ body {
     .mobile-highlighted-text{
         display: block;
         position: relative;
-        top: 0px; 
+        top: 1rem;
         left: 0px; 
-        width: 340px; 
+        width: 100%;
         height: auto; 
         font-family: 'Miama Nueva', serif;
         font-style: italic;
         color: #C74B4B; 
-        font-size: 30px; 
+        font-size: 1.875rem; 
         font-weight: 400; 
-        line-height: 30px;
+        line-height: 1.875rem;
         text-align: center; 
         text-transform: lowercase;
         margin: 0 auto;
@@ -754,218 +762,300 @@ body {
     /* Адаптация секции выставок */
 
     .exhibitions-container {
-        top: 924px; 
-        left: calc(50% - 170px); 
-        height: 1653px; 
-        width: 340px;
+        position: relative;
+        top: 0;
+        left: 0; 
+        height: auto; 
+        width: 95%; 
+        max-width: 340px;
+        margin: 0 auto;
     }
 
     .exhibitions-header {
-        left: calc(50% - 76px);
-        width: 246px;
-        height: 98px;
-    }
-
-    .exhibitions-title {
-        left: 34px;
+        left: 0 ; 
+        width: fit-content; 
+        height: auto; 
+        margin-bottom: 4.3rem; 
+        display: grid;
+        justify-items: end;
     }
 
     .exhibitions-description {
-        width: 246px; 
-        height: 48px; 
+        height: 3rem;
+        width: 73%;
     }
 
-    .exhibition-item1 {
-        top: 168px;
-        width: 340px;
-        height: 442px;
-        left: 0;
-    }
-
-    .exhibition-line1 {
-        top: 3px;
-        width: 230px;
-        margin-right: 40px;
-    }
-
-    .exhibition-image1 {
-        width: 340px;
-        height: 348px;
-    }
-
-    .exhibition-item2 {
-        top: 673px;
-        left: 0; 
-    }
-
-    .exhibition-line2 {
-        top: 3px;
-        width: 230px;
-        margin-right: 40px;
-    }
-
-    .exhibition-image2 {
-        width: 340px;
-        height: 348px;
-    }
-
+    .exhibition-item1,
+    .exhibition-item2,
     .exhibition-item3 {
-        top: 1178px;
+        position: relative; 
+        top: auto; 
         left: 0; 
+        width: 100%; 
+        height: auto; 
     }
 
+    .exhibition-line1,
+    .exhibition-line2,
     .exhibition-line3 {
-        top: 3px;
-        width: 230px;
-        margin-right: 40px;
+        position: relative; 
+        width: 70%; 
     }
 
+    .exhibition-image1,
+    .exhibition-image2,
     .exhibition-image3 {
-        width: 340px;
-        height: 348px;
+        width: 100%; 
+        height: auto; 
+        max-height: 348px; 
+        object-fit: cover; 
     }
 
-     /* Адаптация секции с наградами*/
+    /* Адаптация секции с наградами*/
 
     .awards-section {
-        top: 2710px;
-        left: calc(50% - 170px); 
-        width: 340px;
+        position: relative;
+        top: 0; 
+        left: 0;
+        width: 95%; 
+        max-width: 340px; 
+        height: auto; 
+        margin: 0 auto; 
     } 
 
     .awards-title {
-        left: calc(50% - 15px);
-        margin: 0;
         text-align: left;
         width: 185px;
+        left: calc(100% - 12.1rem);
+        margin: 0;
+        text-align: center;
+        width: fit-content; 
+        font-size: 2.5rem; 
+        margin-bottom: 1.5rem; 
     }
 
     .awards-container {
-        margin-top: 25px;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 1.25rem; 
+        margin-top: 1.5rem; 
     }
 
-    .award-item1 {
-        width: 160px;
-        height: 170px;
-        border-radius: 0px 80px 0px 80px;
+    .award-item1, .award-item2, .award-item3, .award-item4 {
+        width: fit-content;
+        max-width: 160px; 
+        border-radius: 0 80px 0 80px; 
+        margin: 0 auto; 
     }
 
-    .award-item2 {
-        width: 160px;
-        height: 170px;
-        border-radius: 80px 0px 80px 0px;
+    .award-item2, .award-item3 {
+        border-radius: 80px 0 80px 0; 
     }
 
-    .award-item3 {
-        width: 160px;
-        height: 170px;
-        border-radius: 80px 0px 80px 0px;
-    }
-
-    .award-item4 {
-        width: 160px;
-        height: 170px;
-        border-radius: 0px 80px 0px 80px;
-    }
-
-    .award-text {
-        text-align: center;
-        letter-spacing: -0.02em;
-        margin: 0;
-        padding: 0 30px;
-        height: 64px;
-        width: 130px;
+    .award-text, .award-text2 {
+        font-size: 0.9rem; 
+        line-height: 1rem; 
+        padding: 0 1rem; 
+        width: 100%; 
+        margin-top: -0.25rem; 
     }
 
     .award-text2 {
-        position: relative;
-        top: 0px;
-        padding: 0px 18px;
-        margin-top: 43px;
+        margin-top: 2.5rem;
     }
 
     /* Адаптация философии*/
 
     .philosophy-container {
-        top: 3285px;
-        left: calc(50% - 170px);
+        position: relative;
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        max-width: 340px; 
+        height: auto; 
+        margin: 0 auto; 
     }
 
     .philosophy-title {
-        left: 0;
-        margin-bottom: 30px;
-        margin-top: 0;
-        width: 340px;
+        left: 0; 
+        text-align: left; 
+        width: min-content;
+        font-size: 2.5rem;
     }
 
     .philosophy-content {
         background-color: transparent; 
-        border-radius: none; 
-        width: 340px;
-        height: 609px;
-        margin: 0;
-        padding: 0;
+        border-radius: 0; 
+        width: fit-content; 
+        max-width: 340px; 
+        height: auto; 
+        flex-direction: column; 
+        justify-content: center; 
+        gap: 1rem; 
+        padding: 1rem 0; 
     }
 
     .philosophy-image {
         position: absolute;
-        top: 146px;
-        width: 340px;
-        height: 233px;
-        border-radius: 194px 200px 200px 194px; 
+        left: 0;
+        top: 32%;
         margin-right: 0;
-        margin-bottom: 0;
+        width: 100%; 
+        height: auto; 
+        max-height: 233px; 
+        border-radius: 194px 200px 200px 194px; 
+        object-fit: cover; 
+        margin-bottom: 1rem; 
+        object-position: 0rem -3.3rem;
     }
 
     .philosophy-text {
-        position: absolute;
-        text-align: left;
-        width: 340px;
-        height: 609px;
         left: 0;
-        top: 0;
+        position: relative; 
+        text-align: left;
+        width: 100%; 
+        max-width: 340px; 
+        height: auto; 
+        margin: 0 auto; 
+        font-size: 1.25rem; 
+        line-height: 1.5rem; 
+        padding: 1rem 0;
     }
 
     .philosophy-text p {
         position: relative;
-        top: 0;
-        left: 0;
-        margin-top: 0;
-        margin-bottom: 20px;
-        height: 144px;
+        padding: 0; 
+        width: fit-content; 
+        margin: 0 auto; 
+        top: -2.1rem;
+        height: fit-content;
     }
 
     .philosophy-text p:last-child {
         position: relative;
-        top: 253px;
+        top: 15rem;
         margin-top: 0;
         margin-bottom: 0;
-        height: 192px;
+        height: fit-content;
     }
 
     /* Адаптация футера*/
 
     .footer-container {
-        padding: 15px 0px; 
-        padding-top: 80px; 
+        padding: 0.9rem 0; 
+        padding-top: 0; 
         text-align: center; 
-        top: 385px;
+        top: 16.7rem;
     }
 
     .footer-line {
-        margin: 0 auto 10px auto; 
+        margin: 0 auto 0.6rem auto; 
     }
 
     .social-icons {
-        justify-content: right; 
-        gap: 15px; 
-        margin-top: 10px; 
-        margin-bottom: 15px;
-        right: 10px;
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 0.9rem; 
+        margin-top: 0.6rem; 
+        right: 0.6rem;
     }
 
     .social-icons a img {
-        width: 25px; 
-        height: 25px;
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+
+    @media (max-width: 360px) and (orientation: portrait)  {
+       
+        .title-container {
+            position: relative;
+            width: 100%; 
+            max-width: 340px; 
+            left: calc(50% - 3rem);
+            transform: translateX(-50%);
+            top: -19rem;
+        }
+       
+    }
+
+    @media (max-width: 344px) and (orientation: portrait)  {
+
+        .title-container {
+            left: calc(50% - 2rem);
+        }
+
+        .exhibitions-description {
+            width: 76%;
+        }
+
+        .award-text, .award-text2 {
+            font-size: 0.9rem; 
+        }
+
+        .philosophy-title {
+            left: 0.6rem;
+        }
+
+        .philosophy-text p {
+            padding: 0 0.6rem;
+        }
+       
+    }
+
+    @media (max-width: 320px) and (orientation: portrait)  {
+        
+        .title-container {
+            position: relative; 
+            width: 100%; 
+            max-width: 340px; 
+            left: calc(50% - 2rem);
+            transform: translateX(-50%);
+            top: -19rem;
+        }
+
+        .title-a {
+            font-size: 6rem; 
+            line-height: 6.25rem; 
+            top: 0; 
+            left: -1.3rem; 
+            z-index: 1;
+            position: relative; 
+        }
+    
+        .title-bout {
+            font-size: 3.1rem; 
+            line-height: 3.5rem; 
+            top: 0; 
+            left: -2.3rem; 
+            position: relative; 
+        }
+    
+        .title-m { 
+            font-size: 6rem; 
+            line-height: 6.25rem; 
+            top: 0rem; 
+            left: -4.1rem; 
+            position: relative;
+        }
+    
+        .title-ubarik {
+            font-size: 3.1rem; 
+            line-height: 3.5rem; 
+            top: -5.8rem; 
+            left: 5.5rem;
+            position: relative; 
+        }
+        .award-text, .award-text2 {
+            font-size: 0.8rem;
+        }
+
+        .philosophy-content {
+            max-width: 320px;
+        }
+
+        .philosophy-image {
+            left: 0.5rem;
+            width: 95%;
+        }
+
     }
 }

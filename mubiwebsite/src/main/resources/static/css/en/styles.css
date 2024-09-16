@@ -158,22 +158,27 @@ h1, h2, h3, h4, h5, h6, p {
     padding: 0;
 }
 
-@media (max-width: 467px) {
+@media (max-width: 576px) and (orientation: portrait)  {
+
     /* Контейнер страницы */
     .page-container {
         width: 100vw;
         height: auto;
+        max-width: 100%; 
+        margin: 0;
+        overflow: hidden; 
     }
 
     .cover-photo-container {
         position: relative;
         z-index: 1;
         margin-top: -1rem;
+        height: auto; 
+        overflow: hidden; 
     }
 
     /* Стили для контейнера с фото */
     .cover-photo {
-        position: absolute;
         top: 0;  
         left: 0;
         width: 100%; 
@@ -181,35 +186,35 @@ h1, h2, h3, h4, h5, h6, p {
         transform: scale(1);
         transform-origin: center;
         z-index: 1;
+        position: relative; 
     }
 
     .mubarik {
         position: absolute;
-        top: 290px; 
-        left: calc(50% - 98px);
-        width: 196px; 
-        height: 56px; 
-        font-size: 56px;
-        font-weight: 400; 
-        line-height: 56px;
-        letter-spacing: -0.03em;
+        left: calc(50% - 6.125rem);
         color: #FFF9F9; 
         font-family: 'Hauora', sans-serif;
+        margin-top: -3vh; 
+        width: fit-content; 
+        max-width: 200px; 
+        font-size: 3.5rem; 
+        line-height: 1.1; 
+        height: auto;    
     }
 
     .elmurzaeva {
         position: absolute;
-        top: 356px; 
-        left: calc(50% - 140px); 
-        font-size: 56px;
-        font-weight: 400;
-        line-height: 56px;
-        width: 280px;
-        letter-spacing: -0.03em; 
+        left: calc(50% - 8.75rem); 
         color: #FFF9F9;
         font-family: 'Hauora', sans-serif;
         text-align: center;
         z-index: 2;
+        margin-top: 6vh;
+        width: fit-content; 
+        max-width: 300px; 
+        font-size: 3.5rem; 
+        line-height: 1.1; 
+        height: auto;
     }
 
     .bringing-visions,
@@ -218,27 +223,27 @@ h1, h2, h3, h4, h5, h6, p {
     }
 
     .bringing-visions-to-life {
-        top: 35px;
+        top: 2.1875rem;
         display: block;
-        font-size: 30px;
-        line-height: 100%;
+        font-size: 1.875rem;
+        line-height: 1.2;
         text-align: center;
         color: #C74B4B;
         font-family: "Miama Nueva";
         font-style: italic;
         font-weight: 400;
         position: absolute;
-        letter-spacing: -0.6px;
+        letter-spacing: -0.0375rem;
         width: 100%;
         opacity: 0.8;
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 0 auto; 
     }
 
     .go-to-portfolio {
-        top: 560px;
-        left: 50%;
-        line-height: 20px;
+        top: 35rem;
+        left: calc(100% - 12.0625rem);
+        width: max-content;
+        line-height: 1.25rem;
         color: #FFF9F9;
         font-style: normal;
         text-transform: uppercase;
@@ -246,4 +251,53 @@ h1, h2, h3, h4, h5, h6, p {
         z-index: 2;
     }
 
+    @media (max-width: 360px) and (orientation: portrait)  {
+
+        .bringing-visions-to-life {
+            top: 2.1875rem;
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            text-align: center;
+            color: #C74B4B;
+            font-family: "Miama Nueva";
+            font-style: italic;
+            font-weight: 400;
+            position: absolute;
+            letter-spacing: -0.0375rem;
+            width: calc(100% - 1.2rem);
+            opacity: 0.8;
+            margin: 0 auto;
+            left: 0.6rem;
+        }
+
+        .mubarik {
+            position: absolute;
+            left: calc(50% - 5.5rem);
+            color: #FFF9F9;
+            font-family: 'Hauora', sans-serif;
+            margin-top: -3vh;
+            width: fit-content;
+            max-width: 224px;
+            font-size: 3.3rem;
+            line-height: 1.1;
+            height: auto;
+        }
+
+        .elmurzaeva {
+            position: absolute;
+            left: calc(50% - 8.1rem); 
+            color: #FFF9F9;
+            font-family: 'Hauora', sans-serif;
+            text-align: center;
+            z-index: 2;
+            margin-top: 4vh;
+            width: fit-content;
+            max-width: 320px;
+            font-size: 3.3rem;
+            line-height: 2.1;
+            height: auto;
+        }
+
+    }
 }

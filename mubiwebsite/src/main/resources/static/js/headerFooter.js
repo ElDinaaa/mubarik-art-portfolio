@@ -25,12 +25,12 @@ class SpecialHeader extends HTMLElement {
                     <button class="lang-btn">
                         EN 
                         <svg class="lang-icon" viewBox="0 0 7 7">
-                        <polygon points="0,0 7,0 3.5,7" />
+                            <polygon points="0,0 7,0 3.5,7" />
                         </svg>
+                        <div class="lang-dropdown">
+                            <a href="/ru/index" id="lang-ru">RU</a>
+                        </div>
                     </button>
-                    <div class="lang-dropdown">
-                        <a href="/ru/index" id="lang-ru">RU</a>
-                    </div>
                 </div>
             </div>
             <div class="menu-icon">
@@ -48,10 +48,10 @@ class SpecialHeader extends HTMLElement {
                         <svg class="lang-icon" viewBox="0 0 7 7">
                             <polygon points="0,0 7,0 3.5,7" />
                         </svg>
+                        <div class="lang-dropdown">
+                            <a href="/ru/index" id="lang-ru">RU</a>
+                        </div>
                     </button>
-                    <div class="lang-dropdown">
-                        <a href="/ru/index" id="lang-ru">RU</a>
-                    </div>
                 </div>
                 <div class="menu-icon">
                     <img src="/images/Hamburger.svg" alt="Menu" />
@@ -87,7 +87,8 @@ class SpecialHeader extends HTMLElement {
 
 
         // Обработка клика по гамбургер-меню
-        menuIcon.addEventListener('click', () => {
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation();
             navigationPanel.classList.toggle('open');
             backdrop.classList.toggle('active');
             body.classList.toggle('blur-background');
@@ -110,35 +111,33 @@ class SpecialHeader extends HTMLElement {
         });
         
         // Обработка клика по кнопке переключателя языка в хедере
-        langBtnHeader.addEventListener('click', () => {
+        langBtnHeader.addEventListener('click', (event) => {
+            event.stopPropagation();
             langDropdownHeader.classList.toggle('show');
         });
 
         // Обработка клика по кнопке переключателя языка в навигационной панели
-        langBtnPanel.addEventListener('click', () => {
+        langBtnPanel.addEventListener('click', (event) => {
+            event.stopPropagation();
             langDropdownPanel.classList.toggle('show');
         });
 
-        // Закрываем меню языка при клике вне его (для хедера)
-        window.addEventListener('click', (e) => {
-            if (!langBtnHeader.contains(e.target) && !langDropdownHeader.contains(e.target)) {
+        // Универсальный обработчик для закрытия всех панелей при клике вне их
+        window.addEventListener('click', (event) => {
+            // Закрываем навигационную панель
+            if (!navigationPanel.contains(event.target) && !menuIcon.contains(event.target)) {
+                navigationPanel.classList.remove('open');
+                body.classList.remove('blur-background');
+            }
+            
+            // Закрываем меню языка в хедере
+            if (!langBtnHeader.contains(event.target) && !langDropdownHeader.contains(event.target)) {
                 langDropdownHeader.classList.remove('show');
             }
-        });
 
-        // Закрываем меню языка при клике вне его (для навигационной панели)
-        window.addEventListener('click', (e) => {
-            if (!langBtnPanel.contains(e.target) && !langDropdownPanel.contains(e.target)) {
+            // Закрываем меню языка в навигационной панели
+            if (!langBtnPanel.contains(event.target) && !langDropdownPanel.contains(event.target)) {
                 langDropdownPanel.classList.remove('show');
-            }
-        });
-    }
-
-    highlightActiveLink() {
-        const links = this.querySelectorAll('.navigation a');
-        links.forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
             }
         });
     }
@@ -175,12 +174,12 @@ class SpecialHeaderRU extends HTMLElement {
                     <button class="lang-btn">
                         RU 
                         <svg class="lang-icon" viewBox="0 0 7 7">
-                        <polygon points="0,0 7,0 3.5,7" />
+                            <polygon points="0,0 7,0 3.5,7" />
                         </svg>
+                        <div class="lang-dropdown">
+                            <a href="/en/index" id="lang-en">EN</a>
+                        </div>
                     </button>
-                    <div class="lang-dropdown">
-                        <a href="/en/index" id="lang-en">EN</a>
-                    </div>
                 </div>
             </div>
             <div class="menu-icon">
@@ -198,10 +197,10 @@ class SpecialHeaderRU extends HTMLElement {
                         <svg class="lang-icon" viewBox="0 0 7 7">
                             <polygon points="0,0 7,0 3.5,7" />
                         </svg>
+                        <div class="lang-dropdown">
+                            <a href="/en/index" id="lang-en">EN</a>
+                        </div>
                     </button>
-                    <div class="lang-dropdown">
-                        <a href="/en/index" id="lang-en">EN</a>
-                    </div>
                 </div>
                 <div class="menu-icon">
                     <img src="/images/Hamburger.svg" alt="Меню" />
@@ -236,7 +235,8 @@ class SpecialHeaderRU extends HTMLElement {
         const body = document.querySelector('body');
 
         // Обработка клика по гамбургер-меню
-        menuIcon.addEventListener('click', () => {
+        menuIcon.addEventListener('click', (event) => {
+            event.stopPropagation();
             navigationPanel.classList.toggle('open');
             backdrop.classList.toggle('active');
             body.classList.toggle('blur-background');
@@ -259,35 +259,33 @@ class SpecialHeaderRU extends HTMLElement {
         });
 
         // Обработка клика по кнопке переключателя языка в хедере
-        langBtnHeader.addEventListener('click', (e) => {
+        langBtnHeader.addEventListener('click', (event) => {
+            event.stopPropagation();
             langDropdownHeader.classList.toggle('show');
         });
 
         // Обработка клика по кнопке переключателя языка в навигационной панели
-        langBtnPanel.addEventListener('click', () => {
+        langBtnPanel.addEventListener('click', (event) => {
+            event.stopPropagation();
             langDropdownPanel.classList.toggle('show');
         });
 
-        // Закрываем меню языка при клике вне его (для хедера)
-        window.addEventListener('click', (e) => {
-            if (!langBtnHeader.contains(e.target) && !langDropdownHeader.contains(e.target)) {
+        // Универсальный обработчик для закрытия всех панелей при клике вне их
+        window.addEventListener('click', (event) => {
+            // Закрываем навигационную панель
+            if (!navigationPanel.contains(event.target) && !menuIcon.contains(event.target)) {
+                navigationPanel.classList.remove('open');
+                body.classList.remove('blur-background');
+            }
+            
+            // Закрываем меню языка в хедере
+            if (!langBtnHeader.contains(event.target) && !langDropdownHeader.contains(event.target)) {
                 langDropdownHeader.classList.remove('show');
             }
-        });
 
-        // Закрываем меню языка при клике вне его (для навигационной панели)
-        window.addEventListener('click', (e) => {
-            if (!langBtnPanel.contains(e.target) && !langDropdownPanel.contains(e.target)) {
+            // Закрываем меню языка в навигационной панели
+            if (!langBtnPanel.contains(event.target) && !langDropdownPanel.contains(event.target)) {
                 langDropdownPanel.classList.remove('show');
-            }
-        });
-    }
-
-    highlightActiveLink() {
-        const links = this.querySelectorAll('.navigation a');
-        links.forEach(link => {
-            if (link.href === window.location.href) {
-                link.classList.add('active');
             }
         });
     }
@@ -306,7 +304,7 @@ class SpecialFooter extends HTMLElement {
                 <a href="https://www.facebook.com/yourpage" target="_blank">
                     <img src="/images/facebook.svg" alt="Facebook">
                 </a>
-                <a href="" target="_blank">
+                <a href="https://www.instagram.com/mubarikelmurzaeva?igsh=MWZldG51bHhweHB1dw==" target="_blank">
                     <img src="/images/instagram.svg" alt="Instagram">
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=79289087265" target="_blank">

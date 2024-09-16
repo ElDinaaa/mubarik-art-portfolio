@@ -498,6 +498,10 @@ body {
     display: none;
 }
 
+.mobile-close {
+    display: none;
+}
+
 .footer-container {
     margin-top: auto; 
     width: 100%;
@@ -530,8 +534,9 @@ body {
     height: 21px;
 }
 
-@media (max-width: 467px) {
-     /* Контейнер страницы */
+@media (max-width: 576px) and (orientation: portrait)  {
+
+    /* Контейнер страницы */
      .page-container {
         width: 100%;
     }
@@ -539,15 +544,16 @@ body {
     /* Адаптация вектора*/
 
     .vector-container {
-        width: calc(100% - 10px); 
+        width: calc(100% - 0.625rem); 
         height: 630px; 
-        top: 30px; 
+        top: 1.875rem; 
         text-align: center; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        margin: 0 auto; 
     }
 
     .desktop-only {
@@ -556,64 +562,75 @@ body {
 
     .mobile-only {
         display: block;
-        width: calc(100% - 10px); 
+        width: calc(100% - 0.625rem); 
         height: 630px; 
-        border-radius: 210px 210px 0 0;
+        border-radius: 13.125rem 13.125rem 0 0;
         object-fit: cover;
         position: absolute;
         top: 0;
         opacity: 0.5;
-        object-position: -25px 0; 
+        object-position: -1.1rem 0; 
     }
 
     .title-container {
-        top: 241px; 
-        left: 36px; 
-        width: 83px; 
-        height: 100px; 
-        text-align: center; 
+        position: relative; 
+        top: 2.0625rem; 
+        left: 0; 
+        width: 100%; 
+        max-width: 400px;
+        height: auto; 
+        text-align: left; 
         padding: 0; 
         box-sizing: border-box; 
+        margin: 0 auto; 
     }
 
     .title-p {
-        font-size: 100px;
-        line-height: 100px;
-        top: 0;
+        font-size: 6.25rem;
+        line-height: 6.25rem;
         letter-spacing: -0.03em;
+        position: relative; 
+        margin: 0 auto; 
+        top: 1rem;
+        left: calc(50% - 8.9rem);
     }
 
     .title {
         font-family: 'Hauora', sans-serif;
-        font-size: 65px; 
+        font-size: 4.0625rem; 
         font-weight: 400; 
-        line-height: 65px; 
-        top: 3px; 
-        left: 83px; 
-        width: 204px; 
-        height: 65px; 
+        line-height: 4.0625rem; 
+        left: calc(50% - 3.9rem);
+        top: -5.2rem;
+        width: max-content; 
+        height: auto; 
         letter-spacing: -0.03em; 
         color: #FFF9F9; 
+        position: relative; 
     }
 
     .subtitle-container {
-        top: 375px; 
-        left: 180px; 
-        width: 170px;
-        height: 64px; 
-        text-align: left;
+        position: relative; 
+        top: 1.25rem;
+        left: 4.5rem;
+        width: 10.6rem;
+        height: auto; 
+        text-align: center;
+        margin: 0 auto; 
         box-sizing: border-box; 
     }
 
     .subtitle {
         font-family: 'Hauora', sans-serif;
         color: #FFF9F9;
+        position: relative; 
+        margin: 0 auto; 
     }
 
     /* Адаптация галереи*/
 
     .gallery-container {
-        margin-top: 90px;
+        margin-top: 5.6rem;
         width: 100%;
         height: auto !important; 
     }
@@ -640,23 +657,33 @@ body {
     .gallery-item.item-1,
     .gallery-item.item-3,
     .gallery-item.item-7,
+    .gallery-item.item-8,
+    .gallery-item.item-12,
     .gallery-item.item-13,
     .gallery-item.item-16,
-    .gallery-item.item-21,
+    .gallery-item.item-17,
+    .gallery-item.item-19,
+    .gallery-item.item-25,
+    .gallery-item.item-27,
     .gallery-item.item-31 {
         width: 100%; 
         height: auto;
-        padding: 25px 0; 
+        padding: 1.5rem 0; 
     }
 
     .gallery-item.item-1 img,
     .gallery-item.item-3 img,
     .gallery-item.item-7 img,
+    .gallery-item.item-8 img,
+    .gallery-item.item-12 img,
     .gallery-item.item-13 img,
     .gallery-item.item-16 img,
-    .gallery-item.item-21 img, 
+    .gallery-item.item-17 img,
+    .gallery-item.item-19 img,
+    .gallery-item.item-25 img,
+    .gallery-item.item-27 img,
     .gallery-item.item-31 img {
-        width: calc(100% - 10px);  
+        width: calc(100% - 1.2rem);  
         height: auto; 
         object-fit: cover; 
     }
@@ -665,71 +692,66 @@ body {
     .gallery-item.item-4,
     .gallery-item.item-5, 
     .gallery-item.item-6,
-    .gallery-item.item-8,
     .gallery-item.item-9,
     .gallery-item.item-10,
     .gallery-item.item-11,
-    .gallery-item.item-12,
     .gallery-item.item-14,
     .gallery-item.item-15,
-    .gallery-item.item-17,
     .gallery-item.item-18,
-    .gallery-item.item-19,
     .gallery-item.item-20,
+    .gallery-item.item-21,
     .gallery-item.item-22,
     .gallery-item.item-23,
     .gallery-item.item-24,
-    .gallery-item.item-25,
     .gallery-item.item-26,
-    .gallery-item.item-27,
     .gallery-item.item-28,
     .gallery-item.item-29,
     .gallery-item.item-30,
     .gallery-item.item-32,
     .gallery-item.item-33,
-    .gallery-item.item-34 {
-        width: calc(50% - 10px);
+    .gallery-item.item-34,
+    .gallery-item.item-35,
+    .gallery-item.item-36 {
+        width: 50%;
         height: auto;
-        padding-bottom: 50px;
+        padding-bottom: 3.1rem;
     }
 
     .gallery-item.item-2 img,
     .gallery-item.item-4 img,
     .gallery-item.item-5 img, 
     .gallery-item.item-6 img,
-    .gallery-item.item-8 img,
     .gallery-item.item-9 img,
     .gallery-item.item-10 img,
     .gallery-item.item-11 img,
-    .gallery-item.item-12 img,
     .gallery-item.item-14 img,
     .gallery-item.item-15 img,
-    .gallery-item.item-17 img,
     .gallery-item.item-18 img,
-    .gallery-item.item-19 img,
     .gallery-item.item-20 img,
+    .gallery-item.item-21 img,
     .gallery-item.item-22 img,
     .gallery-item.item-23 img,
     .gallery-item.item-24 img,
-    .gallery-item.item-25 img,
     .gallery-item.item-26 img,
-    .gallery-item.item-27 img,
     .gallery-item.item-28 img,
     .gallery-item.item-29 img,
     .gallery-item.item-30 img,
     .gallery-item.item-32 img,
     .gallery-item.item-33 img,
-    .gallery-item.item-34 img {
+    .gallery-item.item-34 img,
+    .gallery-item.item-35 img,
+    .gallery-item.item-36 img {
         width: 100%; 
         height: auto; 
+        padding-left: 0.6rem;
     }
 
     .image-title{ 
-        margin-top: 5px; 
-        width: 175px;
-        height: 16px;
-        margin-left: auto; 
-        margin-right: 0; 
+        margin-top: 0.31rem; 
+        margin-right: 0.3rem;
+        width: fit-content;
+        height: auto;
+        margin-left: auto;
     }
 
     .image-material{
@@ -738,11 +760,11 @@ body {
 
     #view-more-btn {
         position: relative; 
-        left: calc(50% - 76px); 
+        left: 50%; 
+        transform: translateX(-50%); 
         top: auto;
-        margin-bottom: 80px !important;
-        margin-top: 29px !important;
-        margin: 0;
+        margin: 1.8rem 0 5rem 0; 
+        width: fit-content;
     }
 
     /* Адаптация модального окна*/
@@ -762,13 +784,15 @@ body {
     }
 
     .modal {
-        top: 78px !important;
+        position: fixed; /* Изменяем на fixed для лучшего позиционирования */
+        top: 0px !important;
         left: 0;
         width: 100% !important;
         height: 100% !important;
         background-color: #1B1818; 
         border: none;
-        padding: 20px;
+        padding: 1.25rem;
+        overflow-y: auto; 
     }
 
     .modal-content {
@@ -778,19 +802,20 @@ body {
 
     .rectangle{
         border: none; 
-        border-radius: 0 0 0 0; 
+        border-radius: 0; 
         background-color: #1B1818;
     }
 
     .modal-content img {
         max-width: 100%; 
-        max-height: 50%; 
+        max-height: 100%;
         object-fit: cover; 
+        top: 1.5rem;
     }
 
     .modal-content .text-container {
         width: 100%; 
-        padding-top: 30px;
+        padding-top: 1.8rem;
         text-align: left;
         left: 0;
         height: auto;
@@ -798,14 +823,22 @@ body {
         box-sizing: border-box;
     }
 
+    .modal-content .text-container p {
+        width: fit-content;
+    }
+
+    .modal-content .text-container h3 {
+        width: fit-content;
+    }
+
     .rectangle-material {
         top: auto;  
         left: 0;  
         width: 100%;  
-        height: 18px;  
+        height: 1.125rem;  
         border: none;
-        border-radius: 0 0 0 0;  
-        justify-content: left; 
+        border-radius: 0;  
+        justify-content: flex-start; 
     }
 
     .modal-material {
@@ -847,23 +880,21 @@ body {
         top: auto;
         left: 0;
         width: 100%; 
-        height: 50px;
-        margin-top: 20px;
-        font-size: 18px;
-        line-height: 18px;
+        height: 3.1rem;
+        margin-top: 1.25rem;
+        font-size: 1.125rem;
+        line-height: 1.125rem;
         text-align: center;
         border: 1px solid #C74B4B; 
-        border-radius: 25px; 
+        border-radius: 1.5rem; 
         background-color: transparent; 
         color: #F5F5F5;
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer; 
-        padding: 0 47px;
-        gap: 56px; 
-        margin-left: 7px;
-        margin-right: 8px;
+        padding: 0 2.9rem;
+        gap: 1.5rem; 
     }
     
     .order-now-btn.mobile-btn:hover {
@@ -882,31 +913,65 @@ body {
     }
 
     .modal-material, .second-description {
-        text-align: center; /* Выравниваем текст по центру */
+        text-align: center; 
+    }
+
+    /* Стили для кнопки закрытия в мобильной версии */
+    .mobile-close {
+        position: absolute;
+        top: 0; 
+        left: calc(100% - 2rem); 
+        background: transparent; 
+        border: none; 
+        color: #FFF9F9;
+        font-size: 1rem; 
+        cursor: pointer; 
+        z-index: 1001; 
+        width: fit-content;
+        padding: 0;
+        display: block;
+        opacity: 0.9;
     }
 
     /* Адаптация футера*/
 
     .footer-container {
-        padding: 15px 0px; 
+        padding: 0.9rem 0; 
         padding-top: 0px; 
         text-align: center; 
     }
 
     .footer-line {
-        margin: 0 auto 10px auto; 
+        margin: 0 auto 0.6rem auto; 
     }
 
     .social-icons {
-        justify-content: right; 
-        gap: 15px; 
-        margin-top: 10px; 
-        right: 10px;
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 0.9rem; 
+        margin-top: 0.6rem; 
+        right: 0.6rem;
     }
 
     .social-icons a img {
-        width: 25px; 
-        height: 25px;
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+
+    @media (max-width: 320px) and (orientation: portrait)  {
+    
+        .mobile-only {
+            display: block;
+            width: calc(100% - 0.625rem);
+            height: 630px;
+            border-radius: 13.125rem 13.125rem 0 0;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            opacity: 0.5;
+            object-position: -3.5625rem 0;
+        }
+    
     }
 
 

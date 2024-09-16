@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let previousScrollPosition = 0; // Сохраняем положение прокрутки
 
     // Определяем, десктопная это версия или мобильная
-    const isMobile = window.matchMedia("(max-width: 467px)").matches;
+    const isMobile = window.matchMedia("(max-width: 576px)").matches;
 
     // Определяем текущий язык на основе атрибута, установленного на странице
     const language = document.documentElement.lang || 'en'; // Например, 'en' или 'ru'
@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if(!isMobile){             
                 increaseGalleryContainerHeight();    
             } 
+        });
+
+        // Обработчик события для кнопки "VIEW MORE"
+        loadMoreBtn.addEventListener('mousedown', () => {
+            loadMoreBtn.style.backgroundColor = '#C74B4B'; // Цвет при нажатии
+        });
+
+        loadMoreBtn.addEventListener('mouseup', () => {
+            loadMoreBtn.style.backgroundColor = '#1B1818'; // Возвращаем исходный цвет
         });
 
         function loadMoreContent(images, page) {
@@ -103,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'none';  // Изначально скрываем модальное окно
         modal.innerHTML = `
             <div class="modal-content">
+            <!-- Кнопка для закрытия модального окна в мобильной версии -->
+            <button class="close-btn mobile-close">✖</button>
                 <div class="rectangle">
                     <img src="" alt="">
                     <div class="text-container">
@@ -219,19 +230,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // Определяем текущий язык на основе URL
+        const currentLanguage = window.location.pathname.includes('/ru/') ? 'ru' : 'en';
+
         // Обработчик для кнопки "ORDER NOW"
         const orderNowBtns = modal.querySelectorAll('.order-now-btn.desktop-btn, .order-now-btn.mobile-btn');
         orderNowBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                window.location.href = '/en/contact';
+                // Переход на соответствующую страницу "Contact" в зависимости от языка
+                if (currentLanguage === 'ru') {
+                    window.location.href = '/ru/contact';
+                } else {
+                    window.location.href = '/en/contact';
+                }
             });
         });
+
+        // Обработчик для кнопки закрытия в мобильной версии
+        const closeBtn = modal.querySelector('.close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                overlay.style.display = 'none';
+
+                if (isMobile) {
+                    // Возвращаем пользователя к предыдущему положению прокрутки
+                    window.scrollTo({ top: previousScrollPosition, behavior: 'smooth' });
+                }
+            });
+        }
     })
     .catch(error => {
         console.error('Error loading JSON:', error);
     });  
     
-        // Функция для вычисления значения `top`
+    // Функция для вычисления значения `top`
     function calculateTopValue(itemIndex) {
         const initialTops = [152, 292, 782, 944, 1195, 1395]; // Исходные топы для первых 6 элементов
         const groupDifference = 1803; // Разница `top` между элементами из разных групп
